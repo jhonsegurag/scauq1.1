@@ -1,10 +1,10 @@
-
 <div class="users form">
+<?php echo $userData['User']['roles_idroles'] ?>
 <?php echo $this->Session->flash('auth'); ?>
 <?php echo $this->Form->create('User'); ?>
     <fieldset>
         <legend>
-            <?php echo __('¡Bienvenido! Por favor ingrese su usuario y contraseña'); ?>
+            <?php echo __('Please enter your username and password'); ?>
         </legend>
         <?php echo $this->Form->input('username');
         echo $this->Form->input('password');

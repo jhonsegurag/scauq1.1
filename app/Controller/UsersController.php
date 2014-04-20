@@ -2,6 +2,7 @@
 App::uses('AppController', 'Controller');
 App::import('Model', 'Role');
 App::import('Model', 'User');
+App::import('Model', 'OrganizationalUnit');
 /**
  * Users Controller
  *
@@ -19,9 +20,74 @@ class UsersController extends AppController {
 
 	
 	public function beforeFilter() {
-		parent::beforeFilter();
-		// Allow users to register and logout.
-		$this->Auth->allow('add', 'logout');
+    parent::beforeFilter();
+    // Allow users to register and logout.
+    $this->Auth->allow();
+	}
+
+	public function login() {
+		
+		
+		
+		
+	    if ($this->request->is('post')) {
+	    	
+			$username=$this->request->data['User']['username'];
+			
+			$user= new User();
+			$userData=$user->find('first',array('conditions'=>array('User.username'=>$username)));
+			
+			
+	        if ($this->Auth->login())
+			{
+				$userRol=$userData['User']['roles_idroles'];
+				
+				switch ($userRol) {
+					case 1:
+						/*
+						 * Si el usuario tiene un rol tipo 1 se le proporcionan permisos de ADMINISTRADOR
+						 * 
+						 **/
+						
+						$this->users();
+						break;
+						
+					case 2:
+						
+						/*
+						 * Si el usuario tiene un rol tipo 1 se le proporcionan permisos de INTEGRANTE COMITE
+						 * 
+						 **/
+						
+						$this->activities();
+						break;
+						
+					case 3:
+						
+						/*
+						 * Si el usuario tiene un rol tipo 1 se le proporcionan permisos de AUXILIAR DE COMITE
+						 * 
+						 **/
+						
+						break;
+					
+					default:
+						
+						break;
+				}
+				
+				
+	            
+	        }
+			else {
+				$this->Session->setFlash(__('Invalid username or password, try again'));
+			}
+	        
+	    }
+	}
+
+	public function logout() {
+	    return $this->redirect($this->Auth->logout());
 	}
 	
 /**
@@ -55,6 +121,16 @@ class UsersController extends AppController {
  * @return void
  */
 	public function add() {
+		
+		$organizationalUnit= new OrganizationalUnit ();
+		$organizationalUnits=$organizationalUnit->find('list',array('fields'=>array('OrganizationalUnit.idprograms','OrganizationalUnit.nombre')));
+		$this->set('organizationalUnits',$organizationalUnits);
+		
+		$role= new Role ();
+		$roles=$role->find('list',array('fields'=>array('Role.idroles','Role.nombre')));
+		$this->set('roles',$roles);
+		
+		
 		if ($this->request->is('post')) {
 			$this->User->create();
 			if ($this->User->save($this->request->data)) {
@@ -200,36 +276,7 @@ class UsersController extends AppController {
 		return $this->redirect(array('action' => 'index'));
 	}
 
-	public function login() {
 	
-		$rol = new Role();
-		$user= new User();
-		$nombre=$rol->getName();
-		$rolAux=$user-> getRol($this->obtenerId());
-		$aux=$nombre[0]['roles']['nombre'];
-		//print_r($aux);
-		//var_dump($nombre);
-		$this->set('nombrerol',$nombre);
-		if ($this->request->is('post')) {
-				
-			if ($this->Auth->login()) {
-				if($rolAux==1){
-					$this->activities();
-				}
-				else{
-					$this->users();
-				}
-	
-				//return $this->datos();
-			}
-				
-			$this->Session->setFlash(__('Invalid username or password, try again'));
-		}
-	}
-	
-	public function logout() {
-		return $this->redirect($this->Auth->logout());
-	}
 	
 	public function obtenerId(){
 	
@@ -253,6 +300,6 @@ class UsersController extends AppController {
 	 */
 	public function users() {
 	
-		$this->redirect('/users/add');
+		$this->redirect('/users/');
 	}
 }

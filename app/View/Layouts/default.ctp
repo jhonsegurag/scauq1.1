@@ -54,7 +54,7 @@ $cakeDescription = __d('cake_dev', 'Sistema de control de acreditacion UQ');
 			<ul>
 				<li>Home</li>
 				<li>SCAUQ</li>
-				<li>Contáctenos</li>
+				<li>Contactenos</li>
 			</ul>
 		</nav>
 		
