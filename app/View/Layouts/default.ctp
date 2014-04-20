@@ -16,7 +16,7 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
-$cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
+$cakeDescription = __d('cake_dev', 'Sistema de control de acreditacion UQ');
 ?>
 <!DOCTYPE html>
 <html>
@@ -29,7 +29,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 	<?php
 		echo $this->Html->meta('icon');
 
-		echo $this->Html->css('cake.generic');
+		echo $this->Html->css(array('cake.generic','style'));
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
@@ -37,25 +37,52 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 	?>
 </head>
 <body>
-	<div id="container">
-		<div id="header">
-			<h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
-		</div>
+	<div id="main">
+		<header>
+			<div id="contenedorHeader">
+				<div class="panelHeader">
+					<div id="logo">
+						<?php echo $this->Html->image('logo.png',array('alt'=>'SCA-UQ','style'=>'width:100%; height:100%;')) ;?>
+					</div>
+				</div>
+				<div class="panelHeader">
+					
+				</div>				
+			</div>
+		</header>
+		<nav>
+			<ul>
+				<li>Home</li>
+				<li>SCAUQ</li>
+				<li>Contáctenos</li>
+			</ul>
+		</nav>
+		
 		<div id="content">
-
 			<?php echo $this->Session->flash(); ?>
-
 			<?php echo $this->fetch('content'); ?>
 		</div>
-		<div id="footer">
-			<?php echo $this->Html->link(
-					$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
-					'http://www.cakephp.org/',
-					array('target' => '_blank', 'escape' => false)
-				);
-			?>
-		</div>
+		<footer>
+			<div id="contenedorFooter">
+				<div class="panelFooter">
+					<li>Uno</li>
+					<li>dos</li>
+					<li>tres</li>
+				</div>
+				<div class="panelFooter">
+					<li>Uno</li>
+					<li>dos</li>
+					<li>tres</li>
+				</div>
+				<div class="panelFooter">
+					<li>Uno</li>
+					<li>dos</li>
+					<li>tres</li>
+				</div>				
+			</div>
+		</footer>
 	</div>
-	<?php //echo $this->element('sql_dump'); ?>
+	<?php echo $this->element('sql_dump'); ?>
 </body>
+
 </html>

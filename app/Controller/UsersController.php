@@ -1,5 +1,7 @@
 <?php
 App::uses('AppController', 'Controller');
+App::import('Model', 'Role');
+App::import('Model', 'User');
 /**
  * Users Controller
  *
@@ -15,6 +17,13 @@ class UsersController extends AppController {
  */
 	public $components = array('Paginator');
 
+	
+	public function beforeFilter() {
+		parent::beforeFilter();
+		// Allow users to register and logout.
+		$this->Auth->allow('add', 'logout');
+	}
+	
 /**
  * index method
  *
@@ -49,7 +58,8 @@ class UsersController extends AppController {
 		if ($this->request->is('post')) {
 			$this->User->create();
 			if ($this->User->save($this->request->data)) {
-				$this->Session->setFlash(__('The user has been saved.'));
+				//$this->Session->setFlash(__('The user has been saved.'));
+				$this->Session->setFlash('The user has been saved.', 'default', array(), 'good');
 				return $this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The user could not be saved. Please, try again.'));
@@ -70,7 +80,8 @@ class UsersController extends AppController {
 		}
 		if ($this->request->is(array('post', 'put'))) {
 			if ($this->User->save($this->request->data)) {
-				$this->Session->setFlash(__('The user has been saved.'));
+				//$this->Session->setFlash(__('The user has been saved.'));
+				$this->Session->setFlash('The user has been saved.', 'default', array(), 'good');
 				return $this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The user could not be saved. Please, try again.'));
@@ -187,4 +198,61 @@ class UsersController extends AppController {
 			$this->Session->setFlash(__('The user could not be deleted. Please, try again.'));
 		}
 		return $this->redirect(array('action' => 'index'));
-	}}
+	}
+
+	public function login() {
+	
+		$rol = new Role();
+		$user= new User();
+		$nombre=$rol->getName();
+		$rolAux=$user-> getRol($this->obtenerId());
+		$aux=$nombre[0]['roles']['nombre'];
+		//print_r($aux);
+		//var_dump($nombre);
+		$this->set('nombrerol',$nombre);
+		if ($this->request->is('post')) {
+				
+			if ($this->Auth->login()) {
+				if($rolAux==1){
+					$this->activities();
+				}
+				else{
+					$this->users();
+				}
+	
+				//return $this->datos();
+			}
+				
+			$this->Session->setFlash(__('Invalid username or password, try again'));
+		}
+	}
+	
+	public function logout() {
+		return $this->redirect($this->Auth->logout());
+	}
+	
+	public function obtenerId(){
+	
+		return $this->User->primaryKey;
+	}
+	
+	/**
+	 *
+	 *
+	 * @return void
+	 */
+	public function activities() {
+	
+		$this->redirect('/organizationalUnits/index');
+	}
+	
+	/**
+	 *
+	 *
+	 * @return void
+	 */
+	public function users() {
+	
+		$this->redirect('/users/add');
+	}
+}
