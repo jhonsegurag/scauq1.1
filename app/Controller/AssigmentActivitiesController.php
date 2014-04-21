@@ -48,7 +48,7 @@ class AssigmentActivitiesController extends AppController {
  * @return void
  */
 	public function add() {
-	$activity= new Activity ();
+		$activity= new Activity ();
 		$activities=$activity->find('list',array('fields'=>array('Activity.idActivities','Activity.nombre')));
 		$this->set('activities',$activities);
 		

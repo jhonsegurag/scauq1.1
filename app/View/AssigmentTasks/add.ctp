@@ -4,10 +4,11 @@
 		<legend><?php echo __('Add Assigment Task'); ?></legend>
 	<?php
 		echo $this->Form->input('fechaRegistro');
-		echo $this->Form->input('idActividad');
-		echo $this->Form->input('idTarea');
-		echo $this->Form->input('idAsignadoPor');
-		echo $this->Form->input('idAsignadoA');
+		echo $this->Form->input('idActividad',array('label'=>'Actividad','class'=>'','type'=>'select','options'=>$activities,'empty'=>false));
+		echo $this->Form->input('idTarea',array('label'=>'Tarea','class'=>'','type'=>'select','options'=>$tasks,'empty'=>false));
+		echo $this->Form->input('idAsignadoPor',array('label'=>'Asignado Por:','class'=>'','type'=>'select','options'=>$users,'empty'=>false));
+		echo $this->Form->input('idAsignadoA',array('label'=>'Asignado A:','class'=>'','type'=>'select','options'=>$users,'empty'=>false));
+	
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>
