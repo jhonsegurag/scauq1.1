@@ -48,8 +48,8 @@ class UsersController extends AppController {
 						 * Si el usuario tiene un rol tipo 1 se le proporcionan permisos de ADMINISTRADOR
 						 * 
 						 **/
+						$this->admins();
 						
-						$this->users();
 						break;
 						
 					case 2:
@@ -59,7 +59,7 @@ class UsersController extends AppController {
 						 * 
 						 **/
 						
-						$this->activities();
+						
 						break;
 						
 					case 3:
@@ -288,9 +288,9 @@ class UsersController extends AppController {
 	 *
 	 * @return void
 	 */
-	public function activities() {
+	public function admins() {
 	
-		$this->redirect('/organizationalUnits/index');
+		$this->redirect('/admins/');
 	}
 	
 	/**
@@ -298,8 +298,8 @@ class UsersController extends AppController {
 	 *
 	 * @return void
 	 */
-	public function users() {
+	public function perfils() {
 	
-		$this->redirect('/users/');
+		$this->redirect('/perfils/');
 	}
 }

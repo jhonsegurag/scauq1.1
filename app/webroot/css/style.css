@@ -77,6 +77,47 @@ nav ul li:hover
 }
 
 
+#container
+{
+	width: 100%;
+	display: inline-block;
+}
+
+#container #administrador
+{	
+	width: 60%;
+	margin: auto;	
+}
+
+#container h1
+{
+	color: #555;
+	text-align: center;
+	font-size: 140%;
+	font-weight: bold;
+}
+
+#container #administrador .funciones
+{
+	width: 100%;
+	margin: auto;
+	display: inline-block;
+}
+
+#container #administrador .funciones .funcion
+{
+	width: 100px;
+	height: 100px;
+	float: left;
+	margin: 5px;
+	border-radius: 5px;
+}
+
+#container #administrador .funciones .funcion:hover
+{
+	background: #CCC;
+}
+
 #contenedorFooter {
 	width: 100%;
 	background: rgba(255,255,255,0.6);
