@@ -9,11 +9,11 @@
 					
 					
 					<div class="funcion">
-					<?php echo $this->Html->link($this->Html->image('administrador/gestionusuario.png'),array('controller'=>'users','action'=>'index'),array('escapeTitle' => false,'title' => 'Gestion De Usuarios')); ?>
+					<?php echo $this->Html->link($this->Html->image('administrador/gestiontarea.png'),array('controller'=>'tasks','action'=>'index'),array('escapeTitle' => false,'title' => 'Gestion De Tareas')); ?>
 					</div>
 					
 					<div class="funcion">
-					<?php echo $this->Html->link($this->Html->image('administrador/gestionactividad.png'),array('controller'=>'activities','action'=>'index'),array('escapeTitle' => false,'title' => 'Gestion Actividades')); ?>
+					<?php echo $this->Html->link($this->Html->image('administrador/gestionpaso.png'),array('controller'=>'steps','action'=>'index'),array('escapeTitle' => false,'title' => 'Gestion De Pasos')); ?>
 					</div>
 					
 					
@@ -24,11 +24,11 @@
 					
 					
 					<div class="funcion">
-					<?php echo $this->Html->link($this->Html->image('administrador/asignaractividad.png'),array('controller'=>'assigmentactivities','action'=>'index'),array('escapeTitle' => false,'title' => 'Asignar Actividad')); ?>
+					<?php echo $this->Html->link($this->Html->image('administrador/asignartarea.png'),array('controller'=>'assigmenttasks','action'=>'index'),array('escapeTitle' => false,'title' => 'Asignar Tarea')); ?>
 					</div>
 					
 					<div class="funcion">
-					<?php echo $this->Html->link($this->Html->image('administrador/hacerseguimiento.png'),array('controller'=>'assigmentactivities','action'=>'index'),array('escapeTitle' => false,'title' => 'Seguimiento Actividad')); ?>
+					<?php echo $this->Html->link($this->Html->image('administrador/seguimientotarea.png'),array('controller'=>'assigmenttasks','action'=>'index'),array('escapeTitle' => false,'title' => 'Seguimiento Tarea')); ?>
 					</div>
 					
 				</div>

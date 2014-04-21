@@ -38,7 +38,7 @@
 					</div>
 					
 					<div class="funcion">
-					<?php echo $this->Html->link($this->Html->image('administrador/hacerseguimiento.png'),array('controller'=>'assigmentactivities','action'=>'index'),array('escapeTitle' => false,'title' => 'Seguimiento Actividad')); ?>
+					<?php echo $this->Html->link($this->Html->image('administrador/seguimientoactividad.png'),array('controller'=>'assigmentactivities','action'=>'index'),array('escapeTitle' => false,'title' => 'Seguimiento Actividad')); ?>
 					</div>
 					
 				</div>
