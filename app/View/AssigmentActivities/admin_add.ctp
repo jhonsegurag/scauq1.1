@@ -3,9 +3,10 @@
 	<fieldset>
 		<legend><?php echo __('Admin Add Assigment Activity'); ?></legend>
 	<?php
-		echo $this->Form->input('activities_idactivities');
-		echo $this->Form->input('users_idusers');
 		echo $this->Form->input('fecha_asiganacion');
+		echo $this->Form->input('id_Actividad');
+		echo $this->Form->input('id_Asignado_Por');
+		echo $this->Form->input('id_Asignado_A');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

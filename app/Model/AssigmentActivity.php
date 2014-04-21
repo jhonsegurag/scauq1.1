@@ -11,13 +11,6 @@ class AssigmentActivity extends AppModel {
  *
  * @var string
  */
-	public $primaryKey = 'idusers_activities';
-
-/**
- * Display field
- *
- * @var string
- */
-	public $displayField = 'idusers_activities';
+	public $primaryKey = 'idAssigment_activities';
 
 }

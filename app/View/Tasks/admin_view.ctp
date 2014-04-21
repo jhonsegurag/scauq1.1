@@ -6,14 +6,14 @@
 			<?php echo h($task['Task']['idtasks']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Descripcion'); ?></dt>
-		<dd>
-			<?php echo h($task['Task']['descripcion']); ?>
-			&nbsp;
-		</dd>
 		<dt><?php echo __('Nombre'); ?></dt>
 		<dd>
 			<?php echo h($task['Task']['nombre']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Descripcion'); ?></dt>
+		<dd>
+			<?php echo h($task['Task']['descripcion']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Entregable'); ?></dt>
@@ -21,14 +21,14 @@
 			<?php echo h($task['Task']['entregable']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('File Tasks Idfiles'); ?></dt>
+		<dt><?php echo __('Id Estado Tarea'); ?></dt>
 		<dd>
-			<?php echo h($task['Task']['file_tasks_idfiles']); ?>
+			<?php echo h($task['Task']['id_Estado_Tarea']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('State Tasks Idstate Tasks'); ?></dt>
+		<dt><?php echo __('Id Archivo Entregable Tarea'); ?></dt>
 		<dd>
-			<?php echo h($task['Task']['state_tasks_idstate_tasks']); ?>
+			<?php echo h($task['Task']['id_Archivo_Entregable_Tarea']); ?>
 			&nbsp;
 		</dd>
 	</dl>

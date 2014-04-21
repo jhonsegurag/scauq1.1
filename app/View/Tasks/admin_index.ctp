@@ -3,21 +3,21 @@
 	<table cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('idtasks'); ?></th>
-			<th><?php echo $this->Paginator->sort('descripcion'); ?></th>
 			<th><?php echo $this->Paginator->sort('nombre'); ?></th>
+			<th><?php echo $this->Paginator->sort('descripcion'); ?></th>
 			<th><?php echo $this->Paginator->sort('entregable'); ?></th>
-			<th><?php echo $this->Paginator->sort('file_tasks_idfiles'); ?></th>
-			<th><?php echo $this->Paginator->sort('state_tasks_idstate_tasks'); ?></th>
+			<th><?php echo $this->Paginator->sort('id_Estado_Tarea'); ?></th>
+			<th><?php echo $this->Paginator->sort('id_Archivo_Entregable_Tarea'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($tasks as $task): ?>
 	<tr>
 		<td><?php echo h($task['Task']['idtasks']); ?>&nbsp;</td>
-		<td><?php echo h($task['Task']['descripcion']); ?>&nbsp;</td>
 		<td><?php echo h($task['Task']['nombre']); ?>&nbsp;</td>
+		<td><?php echo h($task['Task']['descripcion']); ?>&nbsp;</td>
 		<td><?php echo h($task['Task']['entregable']); ?>&nbsp;</td>
-		<td><?php echo h($task['Task']['file_tasks_idfiles']); ?>&nbsp;</td>
-		<td><?php echo h($task['Task']['state_tasks_idstate_tasks']); ?>&nbsp;</td>
+		<td><?php echo h($task['Task']['id_Estado_Tarea']); ?>&nbsp;</td>
+		<td><?php echo h($task['Task']['id_Archivo_Entregable_Tarea']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $task['Task']['idtasks'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $task['Task']['idtasks'])); ?>

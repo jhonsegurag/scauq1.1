@@ -13,9 +13,4 @@ class Role extends AppModel {
  */
 	public $primaryKey = 'idroles';
 
-	
-	public function getName()
-	{
-		return $this->query("SELECT nombre FROM roles;");
-	}
 }

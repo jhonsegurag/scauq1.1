@@ -1,9 +1,9 @@
 <div class="users view">
 <h2><?php echo __('User'); ?></h2>
 	<dl>
-		<dt><?php echo __('Idusers'); ?></dt>
+		<dt><?php echo __('IdUser'); ?></dt>
 		<dd>
-			<?php echo h($user['User']['idusers']); ?>
+			<?php echo h($user['User']['idUser']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Nombre'); ?></dt>
@@ -36,14 +36,14 @@
 			<?php echo h($user['User']['telefono']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Organizational Units Idprograms'); ?></dt>
+		<dt><?php echo __('Id Unidad Organizacional'); ?></dt>
 		<dd>
-			<?php echo h($user['User']['organizational_units_idprograms']); ?>
+			<?php echo h($user['User']['id_Unidad_Organizacional']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Roles Idroles'); ?></dt>
+		<dt><?php echo __('Id Rol'); ?></dt>
 		<dd>
-			<?php echo h($user['User']['roles_idroles']); ?>
+			<?php echo h($user['User']['id_Rol']); ?>
 			&nbsp;
 		</dd>
 	</dl>
@@ -51,8 +51,8 @@
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('Edit User'), array('action' => 'edit', $user['User']['idusers'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete User'), array('action' => 'delete', $user['User']['idusers']), null, __('Are you sure you want to delete # %s?', $user['User']['idusers'])); ?> </li>
+		<li><?php echo $this->Html->link(__('Edit User'), array('action' => 'edit', $user['User']['idUser'])); ?> </li>
+		<li><?php echo $this->Form->postLink(__('Delete User'), array('action' => 'delete', $user['User']['idUser']), null, __('Are you sure you want to delete # %s?', $user['User']['idUser'])); ?> </li>
 		<li><?php echo $this->Html->link(__('List Users'), array('action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New User'), array('action' => 'add')); ?> </li>
 	</ul>

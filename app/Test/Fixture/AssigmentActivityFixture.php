@@ -11,16 +11,18 @@ class AssigmentActivityFixture extends CakeTestFixture {
  * @var array
  */
 	public $fields = array(
-		'idusers_activities' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 10, 'key' => 'primary'),
-		'activities_idactivities' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 10, 'key' => 'index'),
-		'users_idusers' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 10, 'key' => 'index'),
+		'idAssigment_activities' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 10, 'key' => 'primary'),
 		'fecha_asiganacion' => array('type' => 'date', 'null' => true, 'default' => null),
+		'id_Actividad' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 10, 'key' => 'index'),
+		'id_Asignado_Por' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 10, 'key' => 'index'),
+		'id_Asignado_A' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 10, 'key' => 'index'),
 		'indexes' => array(
-			'PRIMARY' => array('column' => 'idusers_activities', 'unique' => 1),
-			'users_activities_FKIndex1' => array('column' => 'users_idusers', 'unique' => 0),
-			'users_activities_FKIndex2' => array('column' => 'activities_idactivities', 'unique' => 0)
+			'PRIMARY' => array('column' => 'idAssigment_activities', 'unique' => 1),
+			'fk_assigment_activities_AsignadoPor_idx' => array('column' => 'id_Asignado_Por', 'unique' => 0),
+			'fk_assigment_activities_activities_idx' => array('column' => 'id_Actividad', 'unique' => 0),
+			'fk_assigment_activities_AsignadoA_idx' => array('column' => 'id_Asignado_A', 'unique' => 0)
 		),
-		'tableParameters' => array('charset' => 'latin1', 'collate' => 'latin1_swedish_ci', 'engine' => 'InnoDB')
+		'tableParameters' => array('charset' => 'utf8', 'collate' => 'utf8_general_ci', 'engine' => 'InnoDB')
 	);
 
 /**
@@ -30,10 +32,11 @@ class AssigmentActivityFixture extends CakeTestFixture {
  */
 	public $records = array(
 		array(
-			'idusers_activities' => 1,
-			'activities_idactivities' => 1,
-			'users_idusers' => 1,
-			'fecha_asiganacion' => '2014-04-21'
+			'idAssigment_activities' => 1,
+			'fecha_asiganacion' => '2014-04-21',
+			'id_Actividad' => 1,
+			'id_Asignado_Por' => 1,
+			'id_Asignado_A' => 1
 		),
 	);
 

@@ -11,13 +11,6 @@ class OrganizationalUnit extends AppModel {
  *
  * @var string
  */
-	public $primaryKey = 'idprograms';
-
-/**
- * Display field
- *
- * @var string
- */
-	public $displayField = 'idprograms';
+	public $primaryKey = 'idOrganizationalUnit';
 
 }

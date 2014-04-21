@@ -6,19 +6,19 @@
 			<?php echo h($activity['Activity']['idactivities']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('File Activities Idfile Activities'); ?></dt>
+		<dt><?php echo __('Nombre'); ?></dt>
 		<dd>
-			<?php echo h($activity['Activity']['file_activities_idfile_activities']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('State Activities Idstate Activities'); ?></dt>
-		<dd>
-			<?php echo h($activity['Activity']['state_activities_idstate_activities']); ?>
+			<?php echo h($activity['Activity']['nombre']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Descripcion'); ?></dt>
 		<dd>
 			<?php echo h($activity['Activity']['descripcion']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Dirigido'); ?></dt>
+		<dd>
+			<?php echo h($activity['Activity']['dirigido']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('FechaInicio'); ?></dt>
@@ -31,19 +31,9 @@
 			<?php echo h($activity['Activity']['fechaFin']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Nombre'); ?></dt>
-		<dd>
-			<?php echo h($activity['Activity']['nombre']); ?>
-			&nbsp;
-		</dd>
 		<dt><?php echo __('Afecta'); ?></dt>
 		<dd>
 			<?php echo h($activity['Activity']['afecta']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Dirigido'); ?></dt>
-		<dd>
-			<?php echo h($activity['Activity']['dirigido']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Fuentes Informacion'); ?></dt>
@@ -54,6 +44,16 @@
 		<dt><?php echo __('Proceso'); ?></dt>
 		<dd>
 			<?php echo h($activity['Activity']['proceso']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Id Estado Actividad'); ?></dt>
+		<dd>
+			<?php echo h($activity['Activity']['id_Estado_Actividad']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Id Archivo Entregable Actividad'); ?></dt>
+		<dd>
+			<?php echo h($activity['Activity']['id_Archivo_Entregable_Actividad']); ?>
 			&nbsp;
 		</dd>
 	</dl>

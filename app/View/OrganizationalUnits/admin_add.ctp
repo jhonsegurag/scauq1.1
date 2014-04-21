@@ -4,8 +4,7 @@
 		<legend><?php echo __('Admin Add Organizational Unit'); ?></legend>
 	<?php
 		echo $this->Form->input('nombre');
-		echo $this->Form->input('tipo');
-		echo $this->Form->input('organizational_units_idprograms');
+		echo $this->Form->input('id_Unidad_Organizacional');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>
