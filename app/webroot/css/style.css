@@ -4,6 +4,8 @@ body {
 	font-size:90%;
 }
 
+
+
 #main {
 	width: 80%;
 	margin: auto;
@@ -83,13 +85,6 @@ nav ul li:hover
 	display: inline-block;
 }
 
-#container #administrador
-{	
-	width: 60%;
-	margin: auto;	
-	
-}
-
 #container h1
 {
 	color: #555;
@@ -97,6 +92,20 @@ nav ul li:hover
 	font-size: 140%;
 	font-weight: bold;
 }
+
+
+/*
+ * Administrador
+ */
+
+#container #administrador
+{	
+	width: 60%;
+	margin: auto;	
+	
+}
+
+
 
 #container #administrador .funciones
 {
@@ -121,6 +130,48 @@ nav ul li:hover
 {
 	background: #CCC;
 }
+
+/*
+ * 
+ */
+
+#container #miembro
+{	
+	width: 60%;
+	margin: auto;	
+	
+}
+
+
+
+#container #miembro .funciones
+{
+	width: 100%;
+	margin: 10px auto 10px auto;
+	display: inline-block;
+	box-shadow: 0px 0px 10px #CCC;
+    -webkit-box-shadow: 0px 0px 10px #CCC;
+    -moz-box-shadow: 0px 0px 10px #CCC;
+}
+
+#container #miembro .funciones .funcion
+{
+	width: 100px;
+	height: 100px;
+	float: left;
+	margin: 5px;
+	border-radius: 5px;
+}
+
+#container #miembro .funciones .funcion:hover
+{
+	background: #CCC;
+}
+
+
+/*
+ * 
+ */
 
 #contenedorFooter {
 	width: 100%;
