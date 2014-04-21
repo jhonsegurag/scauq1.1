@@ -1,5 +1,8 @@
 <?php
 App::uses('AppController', 'Controller');
+App::import('Model', 'Activity');
+App::import('Model', 'Task');
+App::import('Model', 'User');
 /**
  * AssigmentTasks Controller
  *
@@ -21,6 +24,17 @@ class AssigmentTasksController extends AppController {
  * @return void
  */
 	public function index() {
+		$activity= new Activity ();
+		$activities=$activity->find('list',array('fields'=>array('Activity.idActivities','Activity.nombre')));
+		$this->set('activities',$activities);
+		
+		$user= new User ();
+		$users=$user->find('list',array('fields'=>array('User.idUser','User.nombre','User.apellido')));
+		$this->set('users',$users);
+			
+		$task= new Task();
+		$tasks=$task->find('list',array('fields'=>array('Task.idTasks','Task.nombre')));
+		$this->set('tasks',$tasks);
 		$this->AssigmentTask->recursive = 0;
 		$this->set('assigmentTasks', $this->Paginator->paginate());
 	}
@@ -46,6 +60,19 @@ class AssigmentTasksController extends AppController {
  * @return void
  */
 	public function add() {
+		$activity= new Activity ();
+		$activities=$activity->find('list',array('fields'=>array('Activity.idActivities','Activity.nombre')));
+		$this->set('activities',$activities);
+		
+		$user= new User ();
+		$users=$user->find('list',array('fields'=>array('User.idUser','User.nombre','User.apellido')));
+		$this->set('users',$users);
+			
+		$task= new Task();
+		$tasks=$task->find('list',array('fields'=>array('Task.idTasks','Task.nombre')));
+		$this->set('tasks',$tasks);
+		
+		
 		if ($this->request->is('post')) {
 			$this->AssigmentTask->create();
 			if ($this->AssigmentTask->save($this->request->data)) {
@@ -65,6 +92,17 @@ class AssigmentTasksController extends AppController {
  * @return void
  */
 	public function edit($id = null) {
+		$activity= new Activity ();
+		$activities=$activity->find('list',array('fields'=>array('Activity.idActivities','Activity.nombre')));
+		$this->set('activities',$activities);
+		
+		$user= new User ();
+		$users=$user->find('list',array('fields'=>array('User.idUser','User.nombre','User.apellido')));
+		$this->set('users',$users);
+			
+		$task= new Task();
+		$tasks=$task->find('list',array('fields'=>array('Task.idTasks','Task.nombre')));
+		$this->set('tasks',$tasks);
 		if (!$this->AssigmentTask->exists($id)) {
 			throw new NotFoundException(__('Invalid assigment task'));
 		}
