@@ -11,6 +11,13 @@ class StateTask extends AppModel {
  *
  * @var string
  */
-	public $primaryKey = 'idstate_tasks';
+	public $primaryKey = 'idStateTasks';
+
+/**
+ * Display field
+ *
+ * @var string
+ */
+	public $displayField = 'idStateTasks';
 
 }

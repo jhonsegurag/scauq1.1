@@ -11,6 +11,13 @@ class FileActivity extends AppModel {
  *
  * @var string
  */
-	public $primaryKey = 'idfile_activities';
+	public $primaryKey = 'idFileActivities';
+
+/**
+ * Display field
+ *
+ * @var string
+ */
+	public $displayField = 'idFileActivities';
 
 }

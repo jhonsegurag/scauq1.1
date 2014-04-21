@@ -11,6 +11,13 @@ class FileTask extends AppModel {
  *
  * @var string
  */
-	public $primaryKey = 'idfiles';
+	public $primaryKey = 'idFiles';
+
+/**
+ * Display field
+ *
+ * @var string
+ */
+	public $displayField = 'idFiles';
 
 }
