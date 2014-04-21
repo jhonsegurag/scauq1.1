@@ -1,9 +1,9 @@
 <div class="activities view">
 <h2><?php echo __('Activity'); ?></h2>
 	<dl>
-		<dt><?php echo __('Idactivities'); ?></dt>
+		<dt><?php echo __('IdActivities'); ?></dt>
 		<dd>
-			<?php echo h($activity['Activity']['idactivities']); ?>
+			<?php echo h($activity['Activity']['idActivities']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Nombre'); ?></dt>
@@ -36,9 +36,9 @@
 			<?php echo h($activity['Activity']['afecta']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Fuentes Informacion'); ?></dt>
+		<dt><?php echo __('FuentesInformacion'); ?></dt>
 		<dd>
-			<?php echo h($activity['Activity']['fuentes_informacion']); ?>
+			<?php echo h($activity['Activity']['fuentesInformacion']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Proceso'); ?></dt>
@@ -46,14 +46,14 @@
 			<?php echo h($activity['Activity']['proceso']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Id Estado Actividad'); ?></dt>
+		<dt><?php echo __('IdEstadoActividad'); ?></dt>
 		<dd>
-			<?php echo h($activity['Activity']['id_Estado_Actividad']); ?>
+			<?php echo h($activity['Activity']['idEstadoActividad']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Id Archivo Entregable Actividad'); ?></dt>
+		<dt><?php echo __('IdArchivoEntregableActividad'); ?></dt>
 		<dd>
-			<?php echo h($activity['Activity']['id_Archivo_Entregable_Actividad']); ?>
+			<?php echo h($activity['Activity']['idArchivoEntregableActividad']); ?>
 			&nbsp;
 		</dd>
 	</dl>
@@ -61,8 +61,8 @@
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('Edit Activity'), array('action' => 'edit', $activity['Activity']['idactivities'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete Activity'), array('action' => 'delete', $activity['Activity']['idactivities']), null, __('Are you sure you want to delete # %s?', $activity['Activity']['idactivities'])); ?> </li>
+		<li><?php echo $this->Html->link(__('Edit Activity'), array('action' => 'edit', $activity['Activity']['idActivities'])); ?> </li>
+		<li><?php echo $this->Form->postLink(__('Delete Activity'), array('action' => 'delete', $activity['Activity']['idActivities']), null, __('Are you sure you want to delete # %s?', $activity['Activity']['idActivities'])); ?> </li>
 		<li><?php echo $this->Html->link(__('List Activities'), array('action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Activity'), array('action' => 'add')); ?> </li>
 	</ul>

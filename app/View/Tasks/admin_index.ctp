@@ -2,26 +2,26 @@
 	<h2><?php echo __('Tasks'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
-			<th><?php echo $this->Paginator->sort('idtasks'); ?></th>
+			<th><?php echo $this->Paginator->sort('idTasks'); ?></th>
 			<th><?php echo $this->Paginator->sort('nombre'); ?></th>
 			<th><?php echo $this->Paginator->sort('descripcion'); ?></th>
 			<th><?php echo $this->Paginator->sort('entregable'); ?></th>
-			<th><?php echo $this->Paginator->sort('id_Estado_Tarea'); ?></th>
-			<th><?php echo $this->Paginator->sort('id_Archivo_Entregable_Tarea'); ?></th>
+			<th><?php echo $this->Paginator->sort('idEstadoTarea'); ?></th>
+			<th><?php echo $this->Paginator->sort('idArchivoEntregableTarea'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($tasks as $task): ?>
 	<tr>
-		<td><?php echo h($task['Task']['idtasks']); ?>&nbsp;</td>
+		<td><?php echo h($task['Task']['idTasks']); ?>&nbsp;</td>
 		<td><?php echo h($task['Task']['nombre']); ?>&nbsp;</td>
 		<td><?php echo h($task['Task']['descripcion']); ?>&nbsp;</td>
 		<td><?php echo h($task['Task']['entregable']); ?>&nbsp;</td>
-		<td><?php echo h($task['Task']['id_Estado_Tarea']); ?>&nbsp;</td>
-		<td><?php echo h($task['Task']['id_Archivo_Entregable_Tarea']); ?>&nbsp;</td>
+		<td><?php echo h($task['Task']['idEstadoTarea']); ?>&nbsp;</td>
+		<td><?php echo h($task['Task']['idArchivoEntregableTarea']); ?>&nbsp;</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $task['Task']['idtasks'])); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $task['Task']['idtasks'])); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $task['Task']['idtasks']), null, __('Are you sure you want to delete # %s?', $task['Task']['idtasks'])); ?>
+			<?php echo $this->Html->link(__('View'), array('action' => 'view', $task['Task']['idTasks'])); ?>
+			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $task['Task']['idTasks'])); ?>
+			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $task['Task']['idTasks']), null, __('Are you sure you want to delete # %s?', $task['Task']['idTasks'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>

@@ -6,8 +6,8 @@
 		echo $this->Form->input('nombre');
 		echo $this->Form->input('descripcion');
 		echo $this->Form->input('entregable');
-		echo $this->Form->input('id_Estado_Tarea');
-		echo $this->Form->input('id_Archivo_Entregable_Tarea');
+		echo $this->Form->input('idEstadoTarea');
+		echo $this->Form->input('idArchivoEntregableTarea');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

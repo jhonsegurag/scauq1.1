@@ -3,10 +3,11 @@
 	<fieldset>
 		<legend><?php echo __('Add Assigment Activity'); ?></legend>
 	<?php
-		echo $this->Form->input('fecha_asiganacion');
-		echo $this->Form->input('id_Actividad',array('label'=>'ID Actividad','class'=>'','type'=>'select','options'=>$activities,'empty'=>false));
-		echo $this->Form->input('id_Asignado_Por',array('label'=>'Asignado Por:','class'=>'','type'=>'select','options'=>$users,'empty'=>false));
-		echo $this->Form->input('id_Asignado_A',array('label'=>'Asignado A:','class'=>'','type'=>'select','options'=>$users,'empty'=>false));
+			echo $this->Form->input('fechaAsignacion');
+		echo $this->Form->input('idActividad',array('label'=>'ID Actividad','class'=>'','type'=>'select','options'=>$activities,'empty'=>false));
+		echo $this->Form->input('idAsignadoPor',array('label'=>'Asignado Por:','class'=>'','type'=>'select','options'=>$users,'empty'=>false));
+		echo $this->Form->input('idAsignadoA',array('label'=>'Asignado A:','class'=>'','type'=>'select','options'=>$users,'empty'=>false));
+	
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

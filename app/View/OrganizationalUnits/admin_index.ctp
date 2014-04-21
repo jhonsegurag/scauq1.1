@@ -4,14 +4,14 @@
 	<tr>
 			<th><?php echo $this->Paginator->sort('idOrganizationalUnit'); ?></th>
 			<th><?php echo $this->Paginator->sort('nombre'); ?></th>
-			<th><?php echo $this->Paginator->sort('id_Unidad_Organizacional'); ?></th>
+			<th><?php echo $this->Paginator->sort('idUnidadOrganizacional'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($organizationalUnits as $organizationalUnit): ?>
 	<tr>
 		<td><?php echo h($organizationalUnit['OrganizationalUnit']['idOrganizationalUnit']); ?>&nbsp;</td>
 		<td><?php echo h($organizationalUnit['OrganizationalUnit']['nombre']); ?>&nbsp;</td>
-		<td><?php echo h($organizationalUnit['OrganizationalUnit']['id_Unidad_Organizacional']); ?>&nbsp;</td>
+		<td><?php echo h($organizationalUnit['OrganizationalUnit']['idUnidadOrganizacional']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $organizationalUnit['OrganizationalUnit']['idOrganizationalUnit'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $organizationalUnit['OrganizationalUnit']['idOrganizationalUnit'])); ?>

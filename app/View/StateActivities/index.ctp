@@ -2,18 +2,18 @@
 	<h2><?php echo __('State Activities'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
-			<th><?php echo $this->Paginator->sort('idstate_activities'); ?></th>
+			<th><?php echo $this->Paginator->sort('idStateActivities'); ?></th>
 			<th><?php echo $this->Paginator->sort('nombre'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($stateActivities as $stateActivity): ?>
 	<tr>
-		<td><?php echo h($stateActivity['StateActivity']['idstate_activities']); ?>&nbsp;</td>
+		<td><?php echo h($stateActivity['StateActivity']['idStateActivities']); ?>&nbsp;</td>
 		<td><?php echo h($stateActivity['StateActivity']['nombre']); ?>&nbsp;</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $stateActivity['StateActivity']['idstate_activities'])); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $stateActivity['StateActivity']['idstate_activities'])); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $stateActivity['StateActivity']['idstate_activities']), null, __('Are you sure you want to delete # %s?', $stateActivity['StateActivity']['idstate_activities'])); ?>
+			<?php echo $this->Html->link(__('View'), array('action' => 'view', $stateActivity['StateActivity']['idStateActivities'])); ?>
+			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $stateActivity['StateActivity']['idStateActivities'])); ?>
+			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $stateActivity['StateActivity']['idStateActivities']), null, __('Are you sure you want to delete # %s?', $stateActivity['StateActivity']['idStateActivities'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>

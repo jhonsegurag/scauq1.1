@@ -11,9 +11,9 @@
 			<?php echo h($organizationalUnit['OrganizationalUnit']['nombre']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Id Unidad Organizacional'); ?></dt>
+		<dt><?php echo __('IdUnidadOrganizacional'); ?></dt>
 		<dd>
-			<?php echo h($organizationalUnit['OrganizationalUnit']['id_Unidad_Organizacional']); ?>
+			<?php echo h($organizationalUnit['OrganizationalUnit']['idUnidadOrganizacional']); ?>
 			&nbsp;
 		</dd>
 	</dl>

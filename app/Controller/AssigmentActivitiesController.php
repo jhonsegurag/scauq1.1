@@ -49,11 +49,11 @@ class AssigmentActivitiesController extends AppController {
  */
 	public function add() {
 	$activity= new Activity ();
-		$activities=$activity->find('list',array('fields'=>array('Activity.idactivities','Activity.nombre')));
+		$activities=$activity->find('list',array('fields'=>array('Activity.idActivities','Activity.nombre')));
 		$this->set('activities',$activities);
 		
 		$user= new User ();
-		$users=$user->find('list',array('fields'=>array('User.idUser','User.username')));
+		$users=$user->find('list',array('fields'=>array('User.idUser','User.nombre','User.apellido')));
 		$this->set('users',$users);
 		
 		

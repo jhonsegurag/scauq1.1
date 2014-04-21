@@ -5,7 +5,7 @@
 	<?php
 		echo $this->Form->input('idOrganizationalUnit');
 		echo $this->Form->input('nombre');
-		echo $this->Form->input('id_Unidad_Organizacional');
+		echo $this->Form->input('idUnidadOrganizacional');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>
