@@ -48,7 +48,7 @@ class ActivitiesController extends AppController {
  * @return void
  */
 	public function add() {
-	$stateActivity= new StateActivity ();
+		$stateActivity= new StateActivity ();
 		$stateActivities=$stateActivity->find('list',array('fields'=>array('StateActivity.idStateActivities','StateActivity.nombre')));
 		$this->set('stateActivities',$stateActivities);
 		

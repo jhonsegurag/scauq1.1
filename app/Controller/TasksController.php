@@ -1,5 +1,7 @@
 <?php
 App::uses('AppController', 'Controller');
+App::import('Model', 'StateTask');
+App::import('Model', 'FileTask');
 /**
  * Tasks Controller
  *
@@ -46,6 +48,14 @@ class TasksController extends AppController {
  * @return void
  */
 	public function add() {
+		$stateTask= new StateTask ();
+		$stateTasks=$stateTask->find('list',array('fields'=>array('StateTask.idStateTasks','StateTask.nombre')));
+		$this->set('stateTasks',$stateTasks);
+		
+		$fileTask= new FileTask ();
+		$fileTasks=$fileTask->find('list',array('fields'=>array('FileTask.idFiles','FileTask.nombre')));
+		$this->set('fileTasks',$fileTasks);
+		
 		if ($this->request->is('post')) {
 			$this->Task->create();
 			if ($this->Task->save($this->request->data)) {
@@ -65,6 +75,13 @@ class TasksController extends AppController {
  * @return void
  */
 	public function edit($id = null) {
+		$stateTask= new StateTask ();
+		$stateTasks=$stateTask->find('list',array('fields'=>array('StateTask.idStateTasks','StateTask.nombre')));
+		$this->set('stateTasks',$stateTasks);
+		
+		$fileTask= new FileTask ();
+		$fileTasks=$fileTask->find('list',array('fields'=>array('FileTask.idFiles','FileTask.nombre')));
+		$this->set('fileTasks',$fileTasks);
 		if (!$this->Task->exists($id)) {
 			throw new NotFoundException(__('Invalid task'));
 		}
