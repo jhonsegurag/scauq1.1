@@ -13,4 +13,10 @@ class Activity extends AppModel {
  */
 	public $primaryKey = 'idactivities';
 
+	/**
+	 * Display field
+	 *
+	 * @var string
+	 */
+	public $displayField = 'idactivities';
 }
