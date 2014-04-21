@@ -326,7 +326,7 @@ select {
 	vertical-align: text-bottom;
 	font-family: "frutiger linotype", "lucida grande", "verdana", sans-serif;
 	padding: 1%;
-	width:100%;
+	width:30%;
 	border-radius: 5px;
 }
 select[multiple=multiple] {

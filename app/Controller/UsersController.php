@@ -49,7 +49,7 @@ class UsersController extends AppController {
  * @return void
  */
 	public function add() {
-	$organizationalUnit= new OrganizationalUnit ();
+		$organizationalUnit= new OrganizationalUnit ();
 		$organizationalUnits=$organizationalUnit->find('list',array('fields'=>array('OrganizationalUnit.idOrganizationalUnit','OrganizationalUnit.nombre')));
 		$this->set('organizationalUnits',$organizationalUnits);
 		
@@ -244,7 +244,7 @@ class UsersController extends AppController {
 						 * Si el usuario tiene un rol tipo 1 se le proporcionan permisos de INTEGRANTE COMITE
 						 *
 						 **/
-	
+						$this->members();
 	
 						break;
 	
@@ -254,7 +254,7 @@ class UsersController extends AppController {
 						 * Si el usuario tiene un rol tipo 1 se le proporcionan permisos de AUXILIAR DE COMITE
 						 *
 						 **/
-	
+						$this->auxiliarys();
 						break;
 							
 					default:
@@ -288,7 +288,7 @@ class UsersController extends AppController {
 	 */
 	public function admins() {
 	
-		$this->redirect('/Admins/');
+		$this->redirect('/admins/');
 	}
 	
 	/**
@@ -296,8 +296,19 @@ class UsersController extends AppController {
 	 *
 	 * @return void
 	 */
-	public function perfils() {
+	public function members() {
 	
-		$this->redirect('/perfils/');
+		$this->redirect('/members/');
+	}
+	
+	
+	/**
+	 *
+	 *
+	 * @return void
+	 */
+	public function auxiliarys() {
+	
+		$this->redirect('/auxiliarys/');
 	}
 }

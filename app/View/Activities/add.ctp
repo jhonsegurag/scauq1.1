@@ -6,13 +6,14 @@
 		echo $this->Form->input('nombre');
 		echo $this->Form->input('descripcion');
 		echo $this->Form->input('dirigido');
-		echo $this->Form->input('fechaInicio');
-		echo $this->Form->input('fechaFin');
+		echo $this->Form->input('fechaInicio',array('label'=>'Fecha De Inicio','type'=>'date'));
+		echo $this->Form->input('fechaFin',array('label'=>'Fecha De Finalizacion','type'=>'date'));
 		echo $this->Form->input('afecta');
 		echo $this->Form->input('fuentes_informacion');
 		echo $this->Form->input('proceso');
-		echo $this->Form->input('id_Estado_Actividad');
-		echo $this->Form->input('id_Archivo_Entregable_Actividad');
+		echo $this->Form->input('id_Estado_Actividad',array('label'=>'Estado Actividad','class'=>'','type'=>'select','options'=>$stateActivities,'empty'=>false));
+		echo $this->Form->input('id_Archivo_Entregable_Actividad',array('label'=>'Archivo Entregable','class'=>'','type'=>'select','options'=>$fileActivities,'empty'=>false));
+		
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

@@ -44,12 +44,12 @@ class AppController extends Controller {
             'logoutRedirect' => array(
                 'controller' => 'pages',
                 'action' => 'display',
-                'home'
+                'inicio'
             )
         )
     );
 
     public function beforeFilter() {
-        $this->Auth->allow('index', 'view');
+        $this->Auth->allow('index','view');
     }
 }

@@ -1,5 +1,7 @@
 <?php
 App::uses('AppController', 'Controller');
+App::import('Model', 'StateActivity');
+App::import('Model', 'FileActivity');
 /**
  * Activities Controller
  *
@@ -46,6 +48,15 @@ class ActivitiesController extends AppController {
  * @return void
  */
 	public function add() {
+		
+		$stateActivity= new StateActivity ();
+		$stateActivities=$stateActivity->find('list',array('fields'=>array('StateActivity.idstate_activities','StateActivity.nombre')));
+		$this->set('stateActivities',$stateActivities);
+		
+		$fileActivity= new FileActivity ();
+		$fileActivities=$fileActivity->find('list',array('fields'=>array('FileActivity.idfile_activities','FileActivity.nombre')));
+		$this->set('fileActivities',$fileActivities);
+		
 		if ($this->request->is('post')) {
 			$this->Activity->create();
 			if ($this->Activity->save($this->request->data)) {

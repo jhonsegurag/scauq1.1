@@ -1,5 +1,7 @@
 <?php
 App::uses('AppController', 'Controller');
+App::import('Model', 'Activity');
+App::import('Model', 'User');
 /**
  * AssigmentActivities Controller
  *
@@ -46,6 +48,15 @@ class AssigmentActivitiesController extends AppController {
  * @return void
  */
 	public function add() {
+		$activity= new Activity ();
+		$activities=$activity->find('list',array('fields'=>array('Activity.idactivities','Activity.nombre')));
+		$this->set('activities',$activities);
+		
+		$user= new User ();
+		$users=$user->find('list',array('fields'=>array('User.idUser','User.username')));
+		$this->set('users',$users);
+		
+		
 		if ($this->request->is('post')) {
 			$this->AssigmentActivity->create();
 			if ($this->AssigmentActivity->save($this->request->data)) {
