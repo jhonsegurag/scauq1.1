@@ -9,10 +9,10 @@
 		echo $this->Form->input('fechaInicio');
 		echo $this->Form->input('fechaFin');
 		echo $this->Form->input('afecta');
-		echo $this->Form->input('fuentes_informacion');
+		echo $this->Form->input('fuentesInformacion');
 		echo $this->Form->input('proceso');
-		echo $this->Form->input('id_Estado_Actividad');
-		echo $this->Form->input('id_Archivo_Entregable_Actividad');
+		echo $this->Form->input('idEstadoActividad');
+		echo $this->Form->input('idArchivoEntregableActividad');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

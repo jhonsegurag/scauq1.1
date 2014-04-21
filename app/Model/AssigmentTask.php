@@ -11,6 +11,13 @@ class AssigmentTask extends AppModel {
  *
  * @var string
  */
-	public $primaryKey = 'idactivities_tasks';
+	public $primaryKey = 'idActivitiesTasks';
+
+/**
+ * Display field
+ *
+ * @var string
+ */
+	public $displayField = 'idActivitiesTasks';
 
 }

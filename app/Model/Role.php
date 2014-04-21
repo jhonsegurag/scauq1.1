@@ -11,7 +11,14 @@ class Role extends AppModel {
  *
  * @var string
  */
-	public $primaryKey = 'idroles';
+	public $primaryKey = 'idRoles';
+
+/**
+ * Display field
+ *
+ * @var string
+ */
+	public $displayField = 'idRoles';
 
 	/**
 	 * Funcion que retorna los nombres de los roles

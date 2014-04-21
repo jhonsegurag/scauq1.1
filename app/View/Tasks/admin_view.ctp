@@ -1,9 +1,9 @@
 <div class="tasks view">
 <h2><?php echo __('Task'); ?></h2>
 	<dl>
-		<dt><?php echo __('Idtasks'); ?></dt>
+		<dt><?php echo __('IdTasks'); ?></dt>
 		<dd>
-			<?php echo h($task['Task']['idtasks']); ?>
+			<?php echo h($task['Task']['idTasks']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Nombre'); ?></dt>
@@ -21,14 +21,14 @@
 			<?php echo h($task['Task']['entregable']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Id Estado Tarea'); ?></dt>
+		<dt><?php echo __('IdEstadoTarea'); ?></dt>
 		<dd>
-			<?php echo h($task['Task']['id_Estado_Tarea']); ?>
+			<?php echo h($task['Task']['idEstadoTarea']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Id Archivo Entregable Tarea'); ?></dt>
+		<dt><?php echo __('IdArchivoEntregableTarea'); ?></dt>
 		<dd>
-			<?php echo h($task['Task']['id_Archivo_Entregable_Tarea']); ?>
+			<?php echo h($task['Task']['idArchivoEntregableTarea']); ?>
 			&nbsp;
 		</dd>
 	</dl>
@@ -36,8 +36,8 @@
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('Edit Task'), array('action' => 'edit', $task['Task']['idtasks'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete Task'), array('action' => 'delete', $task['Task']['idtasks']), null, __('Are you sure you want to delete # %s?', $task['Task']['idtasks'])); ?> </li>
+		<li><?php echo $this->Html->link(__('Edit Task'), array('action' => 'edit', $task['Task']['idTasks'])); ?> </li>
+		<li><?php echo $this->Form->postLink(__('Delete Task'), array('action' => 'delete', $task['Task']['idTasks']), null, __('Are you sure you want to delete # %s?', $task['Task']['idTasks'])); ?> </li>
 		<li><?php echo $this->Html->link(__('List Tasks'), array('action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Task'), array('action' => 'add')); ?> </li>
 	</ul>

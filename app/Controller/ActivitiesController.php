@@ -48,13 +48,12 @@ class ActivitiesController extends AppController {
  * @return void
  */
 	public function add() {
-		
-		$stateActivity= new StateActivity ();
-		$stateActivities=$stateActivity->find('list',array('fields'=>array('StateActivity.idstate_activities','StateActivity.nombre')));
+	$stateActivity= new StateActivity ();
+		$stateActivities=$stateActivity->find('list',array('fields'=>array('StateActivity.idStateActivities','StateActivity.nombre')));
 		$this->set('stateActivities',$stateActivities);
 		
 		$fileActivity= new FileActivity ();
-		$fileActivities=$fileActivity->find('list',array('fields'=>array('FileActivity.idfile_activities','FileActivity.nombre')));
+		$fileActivities=$fileActivity->find('list',array('fields'=>array('FileActivity.idFileActivities','FileActivity.nombre')));
 		$this->set('fileActivities',$fileActivities);
 		
 		if ($this->request->is('post')) {
@@ -76,6 +75,13 @@ class ActivitiesController extends AppController {
  * @return void
  */
 	public function edit($id = null) {
+		$stateActivity= new StateActivity ();
+		$stateActivities=$stateActivity->find('list',array('fields'=>array('StateActivity.idStateActivities','StateActivity.nombre')));
+		$this->set('stateActivities',$stateActivities);
+		
+		$fileActivity= new FileActivity ();
+		$fileActivities=$fileActivity->find('list',array('fields'=>array('FileActivity.idFileActivities','FileActivity.nombre')));
+		$this->set('fileActivities',$fileActivities);
 		if (!$this->Activity->exists($id)) {
 			throw new NotFoundException(__('Invalid activity'));
 		}

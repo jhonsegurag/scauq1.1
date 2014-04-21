@@ -3,7 +3,7 @@
 	<fieldset>
 		<legend><?php echo __('Edit Role'); ?></legend>
 	<?php
-		echo $this->Form->input('idroles');
+		echo $this->Form->input('idRoles');
 		echo $this->Form->input('nombre');
 	?>
 	</fieldset>
@@ -13,7 +13,7 @@
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
 
-		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $this->Form->value('Role.idroles')), null, __('Are you sure you want to delete # %s?', $this->Form->value('Role.idroles'))); ?></li>
+		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $this->Form->value('Role.idRoles')), null, __('Are you sure you want to delete # %s?', $this->Form->value('Role.idRoles'))); ?></li>
 		<li><?php echo $this->Html->link(__('List Roles'), array('action' => 'index')); ?></li>
 	</ul>
 </div>

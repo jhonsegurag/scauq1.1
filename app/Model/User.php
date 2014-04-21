@@ -14,6 +14,13 @@ class User extends AppModel {
  */
 	public $primaryKey = 'idUser';
 
+/**
+ * Display field
+ *
+ * @var string
+ */
+	public $displayField = 'idUser';
+
 	/**
 	 * Arreglo de validacion de campos en el momento de login de un usuario
 	 * @var unknown
@@ -37,7 +44,7 @@ class User extends AppModel {
 	 * Metodo que transforma la constraseña antes de ser almacenada
 	 * @param unknown $options
 	 * @return boolean
-	 */
+	*/
 	public function beforeSave($options = array()) {
 		if (isset($this->data[$this->alias]['password'])) {
 			$passwordHasher = new SimplePasswordHasher();

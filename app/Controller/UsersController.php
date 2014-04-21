@@ -49,12 +49,12 @@ class UsersController extends AppController {
  * @return void
  */
 	public function add() {
-		$organizationalUnit= new OrganizationalUnit ();
+	$organizationalUnit= new OrganizationalUnit ();
 		$organizationalUnits=$organizationalUnit->find('list',array('fields'=>array('OrganizationalUnit.idOrganizationalUnit','OrganizationalUnit.nombre')));
 		$this->set('organizationalUnits',$organizationalUnits);
 		
 		$role= new Role ();
-		$roles=$role->find('list',array('fields'=>array('Role.idroles','Role.nombre')));
+		$roles=$role->find('list',array('fields'=>array('Role.idRoles','Role.nombre')));
 		$this->set('roles',$roles);
 		
 		
@@ -78,7 +78,7 @@ class UsersController extends AppController {
  * @return void
  */
 	public function edit($id = null) {
-		$organizationalUnit= new OrganizationalUnit ();
+	$organizationalUnit= new OrganizationalUnit ();
 		$organizationalUnits=$organizationalUnit->find('list',array('fields'=>array('OrganizationalUnit.idOrganizationalUnit','OrganizationalUnit.nombre')));
 		$this->set('organizationalUnits',$organizationalUnits);
 		
@@ -218,16 +218,16 @@ class UsersController extends AppController {
 		if ($this->request->is('post')) {
 	
 			$username=$this->request->data['User']['username'];
-				
+	
 			$user= new User();
 			$userData=$user->find('first',array('conditions'=>array('User.username'=>$username)));
-			
 				
+	
 			if ($this->Auth->login())
 			{
-			
-				$userRol=$userData['User']['id_Rol'];
-				
+					
+				$userRol=$userData['User']['idRol'];
+	
 				switch ($userRol) {
 					case 1:
 						/*
@@ -263,19 +263,19 @@ class UsersController extends AppController {
 				}
 	
 	
-				 
+					
 			}
 			else {
 				$this->Session->setFlash(__('Invalid username or password, try again'));
 			}
-			 
+	
 		}
 	}
 	
 	public function logout() {
 		return $this->redirect($this->Auth->logout());
 	}
-
+	
 	public function obtenerId(){
 	
 		return $this->User->primaryKey;
@@ -311,4 +311,5 @@ class UsersController extends AppController {
 	
 		$this->redirect('/auxiliarys/');
 	}
+
 }

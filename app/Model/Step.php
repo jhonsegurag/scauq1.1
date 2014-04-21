@@ -13,4 +13,11 @@ class Step extends AppModel {
  */
 	public $primaryKey = 'idsteps';
 
+/**
+ * Display field
+ *
+ * @var string
+ */
+	public $displayField = 'idsteps';
+
 }

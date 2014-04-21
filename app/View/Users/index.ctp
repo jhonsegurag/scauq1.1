@@ -2,28 +2,28 @@
 	<h2><?php echo __('Users'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
-			
+			<th><?php echo $this->Paginator->sort('idUser'); ?></th>
 			<th><?php echo $this->Paginator->sort('nombre'); ?></th>
 			<th><?php echo $this->Paginator->sort('apellido'); ?></th>
 			<th><?php echo $this->Paginator->sort('username'); ?></th>
-			
+			<th><?php echo $this->Paginator->sort('password'); ?></th>
 			<th><?php echo $this->Paginator->sort('email'); ?></th>
 			<th><?php echo $this->Paginator->sort('telefono'); ?></th>
-			<th><?php echo $this->Paginator->sort('id_Unidad_Organizacional'); ?></th>
-			<th><?php echo $this->Paginator->sort('id_Rol'); ?></th>
+			<th><?php echo $this->Paginator->sort('idUnidadOrganizacional'); ?></th>
+			<th><?php echo $this->Paginator->sort('idRol'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($users as $user): ?>
 	<tr>
-		
+		<td><?php echo h($user['User']['idUser']); ?>&nbsp;</td>
 		<td><?php echo h($user['User']['nombre']); ?>&nbsp;</td>
 		<td><?php echo h($user['User']['apellido']); ?>&nbsp;</td>
 		<td><?php echo h($user['User']['username']); ?>&nbsp;</td>
-		
+		<td><?php echo h($user['User']['password']); ?>&nbsp;</td>
 		<td><?php echo h($user['User']['email']); ?>&nbsp;</td>
 		<td><?php echo h($user['User']['telefono']); ?>&nbsp;</td>
-		<td><?php echo h($user['User']['id_Unidad_Organizacional']); ?>&nbsp;</td>
-		<td><?php echo h($user['User']['id_Rol']); ?>&nbsp;</td>
+		<td><?php echo h($user['User']['idUnidadOrganizacional']); ?>&nbsp;</td>
+		<td><?php echo h($user['User']['idRol']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $user['User']['idUser'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $user['User']['idUser'])); ?>

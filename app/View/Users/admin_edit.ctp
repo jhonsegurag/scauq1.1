@@ -10,8 +10,8 @@
 		echo $this->Form->input('password');
 		echo $this->Form->input('email');
 		echo $this->Form->input('telefono');
-		echo $this->Form->input('id_Unidad_Organizacional');
-		echo $this->Form->input('id_Rol');
+		echo $this->Form->input('idUnidadOrganizacional');
+		echo $this->Form->input('idRol');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

@@ -36,14 +36,14 @@
 			<?php echo h($user['User']['telefono']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Id Unidad Organizacional'); ?></dt>
+		<dt><?php echo __('IdUnidadOrganizacional'); ?></dt>
 		<dd>
-			<?php echo h($user['User']['id_Unidad_Organizacional']); ?>
+			<?php echo h($user['User']['idUnidadOrganizacional']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Id Rol'); ?></dt>
+		<dt><?php echo __('IdRol'); ?></dt>
 		<dd>
-			<?php echo h($user['User']['id_Rol']); ?>
+			<?php echo h($user['User']['idRol']); ?>
 			&nbsp;
 		</dd>
 	</dl>

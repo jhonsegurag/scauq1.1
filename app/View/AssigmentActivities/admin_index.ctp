@@ -2,24 +2,24 @@
 	<h2><?php echo __('Assigment Activities'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
-			<th><?php echo $this->Paginator->sort('idAssigment_activities'); ?></th>
-			<th><?php echo $this->Paginator->sort('fecha_asiganacion'); ?></th>
-			<th><?php echo $this->Paginator->sort('id_Actividad'); ?></th>
-			<th><?php echo $this->Paginator->sort('id_Asignado_Por'); ?></th>
-			<th><?php echo $this->Paginator->sort('id_Asignado_A'); ?></th>
+			<th><?php echo $this->Paginator->sort('idAssigmentActivities'); ?></th>
+			<th><?php echo $this->Paginator->sort('fechaAsignacion'); ?></th>
+			<th><?php echo $this->Paginator->sort('idActividad'); ?></th>
+			<th><?php echo $this->Paginator->sort('idAsignadoPor'); ?></th>
+			<th><?php echo $this->Paginator->sort('idAsignadoA'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($assigmentActivities as $assigmentActivity): ?>
 	<tr>
-		<td><?php echo h($assigmentActivity['AssigmentActivity']['idAssigment_activities']); ?>&nbsp;</td>
-		<td><?php echo h($assigmentActivity['AssigmentActivity']['fecha_asiganacion']); ?>&nbsp;</td>
-		<td><?php echo h($assigmentActivity['AssigmentActivity']['id_Actividad']); ?>&nbsp;</td>
-		<td><?php echo h($assigmentActivity['AssigmentActivity']['id_Asignado_Por']); ?>&nbsp;</td>
-		<td><?php echo h($assigmentActivity['AssigmentActivity']['id_Asignado_A']); ?>&nbsp;</td>
+		<td><?php echo h($assigmentActivity['AssigmentActivity']['idAssigmentActivities']); ?>&nbsp;</td>
+		<td><?php echo h($assigmentActivity['AssigmentActivity']['fechaAsignacion']); ?>&nbsp;</td>
+		<td><?php echo h($assigmentActivity['AssigmentActivity']['idActividad']); ?>&nbsp;</td>
+		<td><?php echo h($assigmentActivity['AssigmentActivity']['idAsignadoPor']); ?>&nbsp;</td>
+		<td><?php echo h($assigmentActivity['AssigmentActivity']['idAsignadoA']); ?>&nbsp;</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $assigmentActivity['AssigmentActivity']['idAssigment_activities'])); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $assigmentActivity['AssigmentActivity']['idAssigment_activities'])); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $assigmentActivity['AssigmentActivity']['idAssigment_activities']), null, __('Are you sure you want to delete # %s?', $assigmentActivity['AssigmentActivity']['idAssigment_activities'])); ?>
+			<?php echo $this->Html->link(__('View'), array('action' => 'view', $assigmentActivity['AssigmentActivity']['idAssigmentActivities'])); ?>
+			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $assigmentActivity['AssigmentActivity']['idAssigmentActivities'])); ?>
+			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $assigmentActivity['AssigmentActivity']['idAssigmentActivities']), null, __('Are you sure you want to delete # %s?', $assigmentActivity['AssigmentActivity']['idAssigmentActivities'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>

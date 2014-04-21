@@ -2,18 +2,18 @@
 	<h2><?php echo __('Roles'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
-			<th><?php echo $this->Paginator->sort('idroles'); ?></th>
+			<th><?php echo $this->Paginator->sort('idRoles'); ?></th>
 			<th><?php echo $this->Paginator->sort('nombre'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($roles as $role): ?>
 	<tr>
-		<td><?php echo h($role['Role']['idroles']); ?>&nbsp;</td>
+		<td><?php echo h($role['Role']['idRoles']); ?>&nbsp;</td>
 		<td><?php echo h($role['Role']['nombre']); ?>&nbsp;</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $role['Role']['idroles'])); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $role['Role']['idroles'])); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $role['Role']['idroles']), null, __('Are you sure you want to delete # %s?', $role['Role']['idroles'])); ?>
+			<?php echo $this->Html->link(__('View'), array('action' => 'view', $role['Role']['idRoles'])); ?>
+			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $role['Role']['idRoles'])); ?>
+			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $role['Role']['idRoles']), null, __('Are you sure you want to delete # %s?', $role['Role']['idRoles'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>

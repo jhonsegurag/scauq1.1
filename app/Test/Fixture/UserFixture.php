@@ -18,12 +18,12 @@ class UserFixture extends CakeTestFixture {
 		'password' => array('type' => 'string', 'null' => true, 'default' => null, 'length' => 100, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
 		'email' => array('type' => 'string', 'null' => true, 'default' => null, 'length' => 40, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
 		'telefono' => array('type' => 'integer', 'null' => true, 'default' => null, 'length' => 10),
-		'id_Unidad_Organizacional' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 10, 'key' => 'index'),
-		'id_Rol' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 10, 'key' => 'index'),
+		'idUnidadOrganizacional' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 10, 'key' => 'index'),
+		'idRol' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 10, 'key' => 'index'),
 		'indexes' => array(
 			'PRIMARY' => array('column' => 'idUser', 'unique' => 1),
-			'fk_users_organizational_units_idx' => array('column' => 'id_Unidad_Organizacional', 'unique' => 0),
-			'fk_users_roles_idx' => array('column' => 'id_Rol', 'unique' => 0)
+			'fk_users_organizational_units_idx' => array('column' => 'idUnidadOrganizacional', 'unique' => 0),
+			'fk_users_roles_idx' => array('column' => 'idRol', 'unique' => 0)
 		),
 		'tableParameters' => array('charset' => 'utf8', 'collate' => 'utf8_general_ci', 'engine' => 'InnoDB')
 	);
@@ -42,8 +42,8 @@ class UserFixture extends CakeTestFixture {
 			'password' => 'Lorem ipsum dolor sit amet',
 			'email' => 'Lorem ipsum dolor sit amet',
 			'telefono' => 1,
-			'id_Unidad_Organizacional' => 1,
-			'id_Rol' => 1
+			'idUnidadOrganizacional' => 1,
+			'idRol' => 1
 		),
 	);
 

@@ -11,6 +11,13 @@ class Task extends AppModel {
  *
  * @var string
  */
-	public $primaryKey = 'idtasks';
+	public $primaryKey = 'idTasks';
+
+/**
+ * Display field
+ *
+ * @var string
+ */
+	public $displayField = 'idTasks';
 
 }
