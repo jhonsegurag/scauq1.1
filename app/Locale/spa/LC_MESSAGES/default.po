@@ -1,0 +1,20 @@
+msgid "Actions"	
+msgstr "Acciones"
+
+msgid "Delete"	
+msgstr "Eliminar"
+
+msgid "View"	
+msgstr "Ver"
+
+msgid "Edit"	
+msgstr "Editar"	
+ 	
+msgid "Users"	
+msgstr "Usuarios"
+
+msgid "New User"	
+msgstr "Nuevo Usuario"
+
+
+
