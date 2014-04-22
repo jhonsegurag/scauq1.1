@@ -26,6 +26,11 @@ class TaskTest extends CakeTestCase {
 		$this->Task = ClassRegistry::init('Task');
 	}
 
+	function testtaskInstance() {
+		$this->assertTrue(is_a($this->Task, 'Task'));
+	}
+	
+	
 /**
  * tearDown method
  *

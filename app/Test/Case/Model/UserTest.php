@@ -26,6 +26,11 @@ class UserTest extends CakeTestCase {
 		$this->User = ClassRegistry::init('User');
 	}
 
+	
+	function testuserInstance() {
+		$this->assertTrue(is_a($this->User, 'User'));
+	}
+	
 /**
  * tearDown method
  *
