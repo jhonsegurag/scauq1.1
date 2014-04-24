@@ -8,9 +8,7 @@
   <version>1.1</version>  
   <build>  
   		
-        <sourceDirectory>
-        	app/Contoller,
-        	app/Model
+        <sourceDirectory>app
         </sourceDirectory>  
        <!-- <outputDirectory>app</outputDirectory>-->  
         <plugins>  
@@ -30,7 +28,7 @@
   <properties>  
   	<sonar.dynamicAnalysis>false</sonar.dynamicAnalysis>  
     <sonar.language>php</sonar.language>
-  	<sonar.tests>app/Test</sonar.tests>
+  	<!--<sonar.tests>app/Test</sonar.tests>-->
     <!-- ************ Optional properties ************ -->
  
     <!-- Property used for PhpUnit -->
