@@ -12,7 +12,7 @@
         </sourceDirectory>  
        <!-- <outputDirectory>app</outputDirectory>-->  
        <!-- To define the plugin version in your parent POM -->
-    <pluginManagement>
+     <!-- <pluginManagement>
       <plugins>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
