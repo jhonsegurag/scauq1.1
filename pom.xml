@@ -12,21 +12,51 @@
         </sourceDirectory>  
        <!-- <outputDirectory>app</outputDirectory>-->  
         <plugins>  
+        	<!--<plugin>
+        	<groupId>org.apache.maven.plugins</groupId>
+        	<artifactId>maven-jar-plugin</artifactId>
+        	<version>2.5.1</version>
+        	<executions>
+         		 <execution>
+            		<id>default</id>
+            			<goals>
+            		  		<goal>jar</goal>
+           			 </goals>
+          			  <phase>package</phase>
+          		</execution>
+       		 </executions>
+      		</plugin> -->
+      		<plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>default-jar</id>
+                        <!-- minitest does not necessary have .java files under src/main
+                            and this causes [WARNING] JAR will be empty upon mvn package -->
+                        <phase>never</phase>
+                    </execution>
+                </executions>
+            </plugin>
            <plugin>  
               <groupId>org.apache.maven.plugins</groupId>  
               <artifactId>maven-compiler-plugin</artifactId>  
               <version>2.5.1</version>
               <configuration>  
+              	<!--<encoding>UTF-8</encoding>-->
                   <source>1.5</source>  
                   <target>1.5</target>  
                   <excludes>  
                       <exclude>**/*.*</exclude>  
                   </excludes>  
               </configuration>  
-           </plugin>  
+           </plugin> 
+          
         </plugins>  
   </build>  
   <properties>  
+  	<project.build.sourceEncoding>UTF-8 </project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8 </project.reporting.outputEncoding>
   	<sonar.dynamicAnalysis>false</sonar.dynamicAnalysis>  
     <sonar.language>php</sonar.language>
   	<!--<sonar.tests>app/Test</sonar.tests>-->
