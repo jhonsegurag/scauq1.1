@@ -8,7 +8,8 @@
   <version>1.1</version>  
   <build>  
   		
-        <sourceDirectory>app/Controller
+        <sourceDirectory>app/Controller, 
+        	app/Model
         </sourceDirectory>  
        <!-- <outputDirectory>app</outputDirectory>-->  
         <plugins> 
