@@ -8,16 +8,16 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>id.hashcode</groupId>
-  <artifactId>xprofile</artifactId>
+  <artifactId>id_scauq</artifactId>
   <name>scauq</name>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.1</version>
   <!-- For the moment, specify pom as packaging for php projects -->
   <packaging>pom</packaging>
  
  
   <build>
-    <sourceDirectory>/app</sourceDirectory>
-    <testSourceDirectory>/app/Test</testSourceDirectory>
+    <sourceDirectory>C:/xampp/htdocs/GITHUB/scauq1.1/app</sourceDirectory>
+    <testSourceDirectory>C:/xampp/htdocs/GITHUB/scauq1.1/app/Test</testSourceDirectory>
   </build>
  
   <properties>
