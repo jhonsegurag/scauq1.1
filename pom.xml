@@ -16,7 +16,7 @@
  
  
   <build>
-    <sourceDirectory>C:/xampp/htdocs/GITHUB/scauq1.1/app/Controller</sourceDirectory>
+    <sourceDirectory>C:/xampp/htdocs/GITHUB/scauq1.1/</sourceDirectory>
     <testSourceDirectory>file:/C:/xampp/htdocs/GITHUB/scauq1.1/app/Test</testSourceDirectory>
   </build>
  
