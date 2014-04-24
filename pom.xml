@@ -29,10 +29,10 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 				<artifactId>maven-install-plugin</artifactId>
 				<version>2.4</version>
 				<configuration>
-					<file>relative/path/to/file.jar</file>
-					<groupId>pt.example.package</groupId>
+					<file>plugin/maven-jar-plugin-2.4.jar</file>
+					<groupId>jar.plugin.maven</groupId>
 					<artifactId>package</artifactId>
-					<version>version</version>
+					<version>2.4</version>
 					<packaging>jar</packaging>
 				</configuration>
 				<executions>
