@@ -14,12 +14,12 @@
   <!-- For the moment, specify pom as packaging for php projects -->
   <packaging>pom</packaging>
  
- 
+ <!--
   <build>
     <sourceDirectory>C:/codigo</sourceDirectory>
     <testSourceDirectory>file:/C:/xampp/htdocs/GITHUB/scauq1.1/app/Test</testSourceDirectory>
   </build>
- 
+ -->
   <properties>
     <sonar.language>php</sonar.language>
  
