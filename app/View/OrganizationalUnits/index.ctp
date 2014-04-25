@@ -2,9 +2,9 @@
 	<h2><?php echo __('Organizational Units'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
-			<th><?php echo $this->Paginator->sort('idOrganizationalUnit'); ?></th>
+			<th><?php echo $this->Paginator->sort('identificador'); ?></th>
 			<th><?php echo $this->Paginator->sort('nombre'); ?></th>
-			<th><?php echo $this->Paginator->sort('idUnidadOrganizacional'); ?></th>
+			<th><?php echo $this->Paginator->sort('Dependencia'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($organizationalUnits as $organizationalUnit): ?>

@@ -25,7 +25,7 @@
 					</div>
 					
 					<div class="funcion">
-					<?php echo $this->Html->link($this->Html->image('administrador/gestionarchivo.png'),array('controller'=>'','action'=>'index'),array('escapeTitle' => false,'title' => 'Gestion De Archivos')); ?>	
+					<?php echo $this->Html->link($this->Html->image('administrador/gestionarchivo.png'),array('controller'=>'fileactivities','action'=>'index'),array('escapeTitle' => false,'title' => 'Gestion De Archivos')); ?>	
 					</div>
 					
 				</div>
