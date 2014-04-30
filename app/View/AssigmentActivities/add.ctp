@@ -4,7 +4,7 @@
 		<legend><?php echo __('Add Assigment Activity'); ?></legend>
 	<?php
 			echo $this->Form->input('fechaAsignacion');
-		echo $this->Form->input('idActividad',array('label'=>'ID Actividad','class'=>'','type'=>'select','options'=>$activities,'empty'=>false));
+		echo $this->Form->input('idActividad',array('label'=>'Actividad','class'=>'','type'=>'select','options'=>$activities,'empty'=>false));
 		echo $this->Form->input('idAsignadoPor',array('label'=>'Asignado Por:','class'=>'','type'=>'select','options'=>$users,'empty'=>false));
 		echo $this->Form->input('idAsignadoA',array('label'=>'Asignado A:','class'=>'','type'=>'select','options'=>$users,'empty'=>false));
 	

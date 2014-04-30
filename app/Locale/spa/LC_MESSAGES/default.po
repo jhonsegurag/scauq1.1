@@ -75,6 +75,7 @@ msgstr "Usuario"
 msgid "New User" 
 msgstr "Nuevo Usuario"
 
+<<<<<<< HEAD
 msgid "List Users" 
 msgstr "Listar Usuarios"
 
@@ -83,6 +84,46 @@ msgstr "Agregar Usuario"
 
 msgid "Edit User" 
 msgstr "Editar Usuario"
+=======
+msgid "Task"
+msgstr "Tarea"
 
-msgid "Delete User" 
-msgstr "Eliminar Usuario"
+msgid "Tasks"
+msgstr "Tareas"
+
+msgid "New Task"
+msgstr "Tarea Nueva"
+
+msgid "Step"
+msgstr "Paso"
+
+msgid "Steps"
+msgstr "Pasos"
+
+msgid "New Step"
+msgstr "Nuevo Paso"
+
+msgid "Assigment Tasks"
+msgstr "Tareas Asignadas"
+
+msgid "New Assigment Task"
+msgstr "Nueva Asignacion"
+
+msgid "Activities"
+msgstr "Actividades"
+
+msgid "Activity"
+msgstr "Actividad"
+
+msgid "New Activity"
+msgstr "Nueva Actividad"
+
+msgid "Organizational Units"
+msgstr "Unidades Organizacionales"
+
+msgid "New Organizational Unit"
+msgstr "Nueva Unidad Organiz"
+
+msgid "New Role"
+msgstr "Nuevo Rol"
+
