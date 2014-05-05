@@ -254,7 +254,16 @@ class UsersController extends AppController {
 						 * Si el usuario tiene un rol tipo 1 se le proporcionan permisos de AUXILIAR DE COMITE
 						 *
 						 **/
-						$this->auxiliarys();
+						$this->contributors();
+						break;
+						
+					case 4:
+	
+						/*
+						 * Si el usuario tiene un rol tipo 1 se le proporcionan permisos de AUXILIAR DE COMITE
+						 *
+						 **/
+						$this->testers();
 						break;
 							
 					default:
@@ -307,9 +316,20 @@ class UsersController extends AppController {
 	 *
 	 * @return void
 	 */
-	public function auxiliarys() {
+	public function contributors() {
 	
-		$this->redirect('/auxiliarys/');
+		$this->redirect('/contributors/');
 	}
+	
+	/**
+	 *
+	 *
+	 * @return void
+	 */
+	public function testers() {
+	
+		$this->redirect('/testers/');
+	}
+	
 
 }

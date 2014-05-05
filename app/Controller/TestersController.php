@@ -6,7 +6,7 @@ App::uses('AppController', 'Controller');
  * @property OrganizationalUnit $OrganizationalUnit
  * @property PaginatorComponent $Paginator
  */
-class AuxiliarysController extends AppController {
+class TestersController extends AppController {
 
 /**
  * Components
