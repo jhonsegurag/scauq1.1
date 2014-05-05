@@ -1,6 +1,7 @@
 <?php
 App::uses('AppController', 'Controller');
 App::import('Model', 'Task');
+App::import('Model', 'AssigmentTask');
 /**
  * OrganizationalUnits Controller
  *
@@ -32,10 +33,21 @@ class ContributorsController extends AppController {
  * @return void
  */
 	public function mytasks() {
-		$task = new Task();
-		$tasks=$task->find('all');
+		$idUser=$this->Session->read('User.idUser');
 		
-		$this->set('tasks',$tasks);
+		
+		$assigmentTask = new AssigmentTask();
+		$assigmentTasks=$assigmentTask->find('all',array('conditions'=>array('AssigmentTask.idAsignadoA'=>$idUser)));
+		$this->set('assigmentTasks',$assigmentTasks);
+	}
+	
+	
+	/**
+ * view method
+ *
+ * @return void
+ */
+	public function view() {
 	}
 
 

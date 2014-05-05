@@ -227,6 +227,9 @@ class UsersController extends AppController {
 			{
 					
 				$userRol=$userData['User']['idRol'];
+				$idUser=$userData['User']['idUser'];
+				
+				$this->Session->write('User.idUser',$idUser);
 	
 				switch ($userRol) {
 					case 1:
