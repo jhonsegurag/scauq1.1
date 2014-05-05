@@ -31,6 +31,10 @@
 					<?php echo $this->Html->link($this->Html->image('administrador/seguimientotarea.png'),array('controller'=>'assigmenttasks','action'=>'index'),array('escapeTitle' => false,'title' => 'Seguimiento Tarea')); ?>
 					</div>
 					
+					<div class="funcion">
+					<?php echo $this->Html->link($this->Html->image('administrador/reporte.jpg'),array('controller'=>'ReportTasks','action'=>'reporteGeneral'),array('escapeTitle' => false,'title' => 'Reporte General')); ?>
+					</div>
+					
 				</div>
 				
 			</div>
