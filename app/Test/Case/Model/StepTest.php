@@ -25,6 +25,10 @@ class StepTest extends CakeTestCase {
 		parent::setUp();
 		$this->Step = ClassRegistry::init('Step');
 	}
+	
+	function testStepInstance() {
+		$this->assertTrue(is_a($this->Step, 'Step'));
+	}
 
 /**
  * tearDown method

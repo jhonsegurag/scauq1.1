@@ -16,6 +16,7 @@ class StateActivityTest extends CakeTestCase {
 		'app.state_activity'
 	);
 
+	
 /**
  * setUp method
  *
@@ -26,6 +27,9 @@ class StateActivityTest extends CakeTestCase {
 		$this->StateActivity = ClassRegistry::init('StateActivity');
 	}
 
+	function testStateActivityInstance() {
+		$this->assertTrue(is_a($this->StateActivity, 'StateActivity'));
+	}
 /**
  * tearDown method
  *

@@ -31,7 +31,7 @@ class ContributorsController extends AppController {
  *
  * @return void
  */
-	public function tasks() {
+	public function mytasks() {
 		$task = new Task();
 		$tasks=$task->find('all');
 		

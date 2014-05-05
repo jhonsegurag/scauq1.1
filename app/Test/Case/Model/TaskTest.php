@@ -26,7 +26,7 @@ class TaskTest extends CakeTestCase {
 		$this->Task = ClassRegistry::init('Task');
 	}
 
-	function testtaskInstance() {
+	function testTaskInstance() {
 		$this->assertTrue(is_a($this->Task, 'Task'));
 	}
 	

@@ -26,6 +26,10 @@ class OrganizationalUnitTest extends CakeTestCase {
 		$this->OrganizationalUnit = ClassRegistry::init('OrganizationalUnit');
 	}
 
+
+	function testOrganizationalUnitInstance() {
+		$this->assertTrue(is_a($this->OrganizationalUnit, 'OrganizationalUnit'));
+	}
 /**
  * tearDown method
  *

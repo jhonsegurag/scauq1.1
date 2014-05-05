@@ -26,6 +26,10 @@ class FileActivityTest extends CakeTestCase {
 		$this->FileActivity = ClassRegistry::init('FileActivity');
 	}
 
+
+	function testFileActivityInstance() {
+		$this->assertTrue(is_a($this->FileActivity, 'FileActivity'));
+	}
 /**
  * tearDown method
  *

@@ -25,6 +25,10 @@ class FileTaskTest extends CakeTestCase {
 		parent::setUp();
 		$this->FileTask = ClassRegistry::init('FileTask');
 	}
+	
+	function testFileTaskInstance() {
+		$this->assertTrue(is_a($this->FileTask, 'FileTask'));
+	}
 
 /**
  * tearDown method

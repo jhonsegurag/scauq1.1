@@ -26,6 +26,10 @@ class RoleTest extends CakeTestCase {
 		$this->Role = ClassRegistry::init('Role');
 	}
 
+
+	function testRoleInstance() {
+		$this->assertTrue(is_a($this->Role, 'Role'));
+	}
 /**
  * tearDown method
  *

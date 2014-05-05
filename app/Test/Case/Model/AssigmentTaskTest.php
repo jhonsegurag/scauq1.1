@@ -16,6 +16,8 @@ class AssigmentTaskTest extends CakeTestCase {
 		'app.assigment_task'
 	);
 
+
+	
 /**
  * setUp method
  *
@@ -26,6 +28,10 @@ class AssigmentTaskTest extends CakeTestCase {
 		$this->AssigmentTask = ClassRegistry::init('AssigmentTask');
 	}
 
+
+	function testAssigmentTaskInstance() {
+		$this->assertTrue(is_a($this->AssigmentTask, 'AssigmentTask'));
+	}
 /**
  * tearDown method
  *

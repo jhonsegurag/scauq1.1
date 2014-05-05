@@ -27,7 +27,7 @@ class UserTest extends CakeTestCase {
 	}
 
 	
-	function testuserInstance() {
+	function testUserInstance() {
 		$this->assertTrue(is_a($this->User, 'User'));
 	}
 	

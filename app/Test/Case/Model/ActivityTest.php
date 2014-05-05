@@ -25,6 +25,10 @@ class ActivityTest extends CakeTestCase {
 		parent::setUp();
 		$this->Activity = ClassRegistry::init('Activity');
 	}
+	
+	function testActivityInstance() {
+		$this->assertTrue(is_a($this->Activity, 'Activity'));
+	}
 
 /**
  * tearDown method
