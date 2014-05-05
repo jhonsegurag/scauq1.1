@@ -31,7 +31,7 @@ class ReportTaskFixture extends CakeTestFixture {
 	public $records = array(
 		array(
 			'idReportTasks' => 1,
-			'fecha' => '2014-05-05',
+			'fecha' => '2014-05-06',
 			'idEstadoReporteTarea' => 1,
 			'tracking_task_idTrackingTask' => 1
 		),

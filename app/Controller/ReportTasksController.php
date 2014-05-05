@@ -1,7 +1,7 @@
 <?php
 App::uses('AppController', 'Controller');
 
-App::import('Model', 'Reporte');
+App::import('Model', 'ReporteGeneral');
 App::import('Lib/tcpdf', 'tcpdf');
 App::import('Lib/tcpdf/config/lang','eng');
 /**
@@ -194,7 +194,7 @@ class ReportTasksController extends AppController {
 	}
 
 	public function reporteGeneral(){
-		$objConsulta= new Reporte();
+		$objConsulta= new ReporteGeneral();
 		$perfil="";
 		$pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
 	

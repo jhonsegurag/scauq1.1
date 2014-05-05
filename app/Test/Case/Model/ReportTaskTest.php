@@ -26,9 +26,6 @@ class ReportTaskTest extends CakeTestCase {
 		$this->ReportTask = ClassRegistry::init('ReportTask');
 	}
 
-	function testReportTaskInstance() {
-		$this->assertTrue(is_a($this->ReportTask, 'ReportTask'));
-	}
 /**
  * tearDown method
  *

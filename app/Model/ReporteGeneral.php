@@ -1,10 +1,10 @@
 <?php
 App::uses('Conexion', 'Model');
-class Reporte{
+class ReporteGeneral{
 	var $conn;
 	var $conexion;
 	
-	function Reporte(){
+	function ReporteGeneral(){
 		$this->conexion= new  Conexion();
 		$this->conn=$this->conexion->conectarse();
 	}
