@@ -1,5 +1,5 @@
 <?php
-class Conexion{
+ class Conexion{
 	var $ruta;
 	var $usuario;
 	var $contrasena;

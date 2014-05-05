@@ -40,6 +40,6 @@
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(__('New Report Task'), array('action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('Generar Reporte'), array('action' => 'generar')); ?></li>
+		<li><?php echo $this->Html->link(__('Reporte General'), array('action' => 'reporteGeneral')); ?></li>
 	</ul>
 </div>

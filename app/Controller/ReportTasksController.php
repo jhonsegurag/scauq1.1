@@ -1,12 +1,9 @@
 <?php
 App::uses('AppController', 'Controller');
-App::import('Model', 'ReportTasks');
-App::uses('ReportTask', 'Model');
-App::import('ReportTask', 'Model');
-App::uses('tcpdf', 'tcpdf');
-App::import('tcpdf', 'tcpdf');
-App::uses('eng', 'tcpdf/config/lang');
-App::import('eng', 'tcpdf/config/lang');
+
+App::import('Model', 'Reporte');
+App::import('Lib/tcpdf', 'tcpdf');
+App::import('Lib/tcpdf/config/lang','eng');
 /**
  * ReportTasks Controller
  *
@@ -195,59 +192,58 @@ class ReportTasksController extends AppController {
 		}
 		return $this->redirect(array('action' => 'index'));
 	}
-	
-	public function generar(){
-		$objConsulta= new ReportTask();
+
+	public function reporteGeneral(){
+		$objConsulta= new Reporte();
 		$perfil="";
 		$pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
-		
+	
 		// set document information
 		$pdf->SetCreator(PDF_CREATOR);
 		$pdf->SetAuthor('Diego Alvarado');
 		$pdf->SetTitle('Reporte de Usuarios');
 		$pdf->SetSubject('Reportes de Tareas Asignadas');
 		$pdf->SetKeywords('Reporte,tareas, scauq, seguimiento');
-		
-		
-		
+	
+	
+	
 		$pdf->SetDefaultMonospacedFont(PDF_FONT_MONOSPACED);
-		
+	
 		//set margins
 		$pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT);
 		$pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
 		$pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
-		
+	
 		//set auto page breaks
 		$pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
-		
+	
 		//set image scale factor
 		$pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
-		
+	
 		//set some language-dependent strings
 		//$pdf->setLanguageArray($l);
-		
+	
 		// ---------------------------------------------------------
-		
+	
 		// set default font subsetting mode
 		$pdf->setFontSubsetting(true);
-		
+	
 		$pdf->SetFont('helvetica', '', 9, '', true);
-		
+	
 		// Add a page
 		// This method has several options, check the source code documentation for more information.
 		$pdf->setPrintHeader(false); //no imprime la cabecera ni la linea
 		$pdf->setPrintFooter(true); // imprime el pie ni la linea
 		$pdf->AddPage();
-		
+	
 		//*************
 		ob_end_clean();//rompimiento de pagina
 		//*************
-		
+	
 		$html = $objConsulta->reportePdfUsuarios();
 		$pdf->writeHTMLCell($w=0, $h=0, $x='', $y='', $html, $border=0, $ln=1, $fill=0, $reseth=true, $align='', $autopadding=true);
-		
-		//$pdf->Output('Reporte usuarios.pdf', 'I');
+	
+		$pdf->Output('Reporte usuarios.pdf', 'I');
 	}
-
 
 }
