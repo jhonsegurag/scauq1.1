@@ -1,3 +1,11 @@
+#: Months
+msgid "January" 
+msgstr "Enero"
+
+msgid "April" 
+msgstr "Abril"
+
+#: Generals
 msgid "Actions"	
 msgstr "Acciones"
 
@@ -9,13 +17,74 @@ msgstr "Ver"
 
 msgid "Edit"	
 msgstr "Editar"	
- 	
-msgid "Users"	
+
+#: Activities
+msgid "Activities" 
+msgstr "Actividades"
+
+msgid "Activity" 
+msgstr "Actividad"
+
+msgid "New Activity" 
+msgstr "Nueva Actividad"
+
+msgid "List Activities" 
+msgstr "Listar Actividades"
+
+msgid "Add Activity" 
+msgstr "Agregar Actividad"
+
+msgid "Edit Activity" 
+msgstr "Editar Actividad"
+
+msgid "Delete Activity" 
+msgstr "Eliminar Actividad"
+
+msgid "" 
+msgstr ""
+
+#: Users 	
+msgid "Users" 
 msgstr "Usuarios"
 
-msgid "New User"	
+msgid "User" 
+msgstr "Usuario"
+
+msgid "New User" 
 msgstr "Nuevo Usuario"
 
+msgid "List Users" 
+msgstr "Listar Usuarios"
+
+msgid "Add User" 
+msgstr "Agregar Usuario"
+
+msgid "Edit User" 
+msgstr "Editar Usuario"
+
+msgid "Delete User" 
+msgstr "Eliminar Usuario"
+
+#: Assigment Activities	
+msgid "Assigment Activities" 
+msgstr "Actividades Asignadas"
+
+msgid "User" 
+msgstr "Usuario"
+
+msgid "New User" 
+msgstr "Nuevo Usuario"
+
+<<<<<<< HEAD
+msgid "List Users" 
+msgstr "Listar Usuarios"
+
+msgid "Add User" 
+msgstr "Agregar Usuario"
+
+msgid "Edit User" 
+msgstr "Editar Usuario"
+=======
 msgid "Task"
 msgstr "Tarea"
 
