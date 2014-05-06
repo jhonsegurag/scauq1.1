@@ -64,25 +64,14 @@ $cakeDescription = __d('cake_dev', 'Sistema de control de acreditacion UQ');
 		</div>
 		<footer>
 			<div id="contenedorFooter">
-				<div class="panelFooter">
-					<li>Uno</li>
-					<li>dos</li>
-					<li>tres</li>
-				</div>
-				<div class="panelFooter">
-					<li>Uno</li>
-					<li>dos</li>
-					<li>tres</li>
-				</div>
-				<div class="panelFooter">
-					<li>Uno</li>
-					<li>dos</li>
-					<li>tres</li>
-				</div>				
+				<?php echo $this->Html->image('footer.png',array('alt'=>'SCA-UQ','style'=>'width:100%; height:100%;')) ;?>
+			
+				
+							
 			</div>
 		</footer>
 	</div>
-	<?php echo $this->element('sql_dump'); ?>
+	<?php //echo $this->element('sql_dump'); ?>
 </body>
 
 </html>

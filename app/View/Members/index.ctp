@@ -32,7 +32,7 @@
 					</div>
 					
 					<div class="funcion">
-					<?php echo $this->Html->link($this->Html->image('administrador/reporte.jpg'),array('controller'=>'ReportTasks','action'=>'reporteGeneral'),array('escapeTitle' => false,'title' => 'Reporte General')); ?>
+					<?php echo $this->Html->link($this->Html->image('administrador/reporte.png'),array('controller'=>'ReportTasks','action'=>'reporteGeneral'),array('escapeTitle' => false,'title' => 'Reporte General')); ?>
 					</div>
 					
 				</div>

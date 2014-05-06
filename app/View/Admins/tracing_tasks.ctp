@@ -3,7 +3,13 @@
 	<h2>Seguimiento de tareas</h2>
 	<table >
 		
-		<tr><th>ID</th><th>Nombre</th><th>Fecha Límite</th><th>Estado</th><th>Detalles</th></tr>
+		<tr>
+			<th>ID</th>
+			<th>Nombre</th>
+			<th>Fecha Límite</th>
+			<th>Estado</th>
+			<!--<th>Detalles</th>-->
+		</tr>
 		<?php
 		for ($i=0; $i <sizeof($tasks) ; $i++) {		
 		?>
@@ -12,7 +18,7 @@
 			<td><?php echo $tasks[$i]['Task']['nombre']; ?></td>
 			<td><?php echo $tasks[$i]['Task']['descripcion']; ?></td>
 			<td><?php  echo getStateColor($tasks[$i]['Task']['idEstadoTarea']); ?></td>
-			<td><?php echo $this->Html->link('Ver', array('action' => 'detailsTasks', $tasks[$i]['Task']['idTasks'])); ?></td>
+			<!--<td><?php echo $this->Html->link('Ver', array('action' => 'detailsTasks', $tasks[$i]['Task']['idTasks'])); ?></td>-->
 		</tr>
 		<?php
 		}
