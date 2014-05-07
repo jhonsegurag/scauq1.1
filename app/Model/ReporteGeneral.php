@@ -12,14 +12,14 @@ class ReporteGeneral{
 	public function reportePdfUsuarios(){
 	
 		$html="";
-		$sql="	select
-								(select distinct concat( u.nombre,' ',u.apellido)
-									from users as u join tracking_task as t on u.username=t.usernameResponsable)as Responsable,
+		$sql="select 
+						(select distinct concat( u.nombre,' ',u.apellido) 
+						from users as u join tracking_tasks as t on u.username=t.usernameResponsable)as Responsable, 
 							nombreTarea,
 							estadoTarea,
 							fechaActual,
-							count(estadoTarea) as Contador
-					from tracking_task group by estadoTarea;";
+							count(estadoTarea) as Contador 
+				from tracking_tasks group by estadoTarea;";
 		$rs=mysqli_query($this->conn,$sql);
 		$i=0;
 	
