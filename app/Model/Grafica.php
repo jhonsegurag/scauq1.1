@@ -32,6 +32,7 @@ $b3plot = new BarPlot($data3y);
 // Create the grouped bar plot
 //$gbplot = new GroupBarPlot(array($b1plot,$b2plot,$b3plot));
 $gbbplot = new AccBarPlot(array($b1plot,$b2plot,$b3plot));
+
 $gbplot = new GroupBarPlot(array($gbbplot));
 
 // ...and add it to the graPH
@@ -51,6 +52,9 @@ $b3plot->SetFillColor("#1111cc");
 $b3plot->SetLegend("Cerrado");
 
 $graph->title->Set("Porcentaje de trabajo");
+//Marco para la leyendas de los datos 
+$graph->legend->SetFrameWeight(8);
+//$graph->legend->SetColumns(4);
 
 // Display the graph
 $graph->Stroke();
