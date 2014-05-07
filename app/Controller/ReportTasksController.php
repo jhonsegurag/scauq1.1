@@ -2,8 +2,11 @@
 App::uses('AppController', 'Controller');
 
 App::import('Model', 'ReporteGeneral');
+App::import('Model', 'Grafica');
 App::import('Lib/tcpdf', 'tcpdf');
 App::import('Lib/tcpdf/config/lang','eng');
+
+
 /**
  * ReportTasks Controller
  *
@@ -246,4 +249,11 @@ class ReportTasksController extends AppController {
 		$pdf->Output('Reporte usuarios.pdf', 'I');
 	}
 
+	public function reporteEstadistico(){
+		
+		$objConsulta= new Grafica();
+		$objConsulta->generarGrafica();
+		
+	}
+	
 }

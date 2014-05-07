@@ -41,5 +41,6 @@
 	<ul>
 		<li><?php echo $this->Html->link(__('New Report Task'), array('action' => 'add')); ?></li>
 		<li><?php echo $this->Html->link(__('Reporte General'), array('action' => 'reporteGeneral')); ?></li>
+		<li><?php echo $this->Html->link(__('Reporte Estadistico'), array('action' => 'reporteEstadistico')); ?></li>
 	</ul>
 </div>
