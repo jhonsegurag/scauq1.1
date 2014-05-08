@@ -2,7 +2,6 @@
 App::uses('AppController', 'Controller');
 
 App::import('Model', 'ReporteGeneral');
-App::import('Model', 'Grafica');
 App::import('Lib/tcpdf', 'tcpdf');
 App::import('Lib/tcpdf/config/lang','eng');
 
@@ -197,7 +196,10 @@ class ReportTasksController extends AppController {
 	}
 
 	public function reporteGeneral(){
-		$objConsulta= new ReporteGeneral();
+		$reporte= new ReporteGeneral();
+		$idUser=$this->Session->read('User.idUser');
+		$indice=$reporte->generarGraficaSumatoriaEstados($idUser);
+		
 		$perfil="";
 		$pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
 	
@@ -243,16 +245,16 @@ class ReportTasksController extends AppController {
 		ob_end_clean();//rompimiento de pagina
 		//*************
 	
-		$html = $objConsulta->reportePdfUsuarios();
+		$html = $reporte->generarSumatoriaEstados($indice);
 		$pdf->writeHTMLCell($w=0, $h=0, $x='', $y='', $html, $border=0, $ln=1, $fill=0, $reseth=true, $align='', $autopadding=true);
 	
-		$pdf->Output('Reporte usuarios.pdf', 'I');
+		$pdf->Output('Reporte usuarios.pdf', 'D');
 	}
 
 	public function reporteEstadistico(){
-		
-		$objConsulta= new Grafica();
-		$objConsulta->generarGrafica();
+		$idUser=$this->Session->read('User.idUser');
+		$reporte= new ReporteGeneral();
+		$reporte->generarGraficaSumatoriaEstados($idUser);
 		
 	}
 	
