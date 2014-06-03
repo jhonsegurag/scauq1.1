@@ -230,7 +230,7 @@ class UsersController extends AppController {
 				$idUser=$userData['User']['idUser'];
 				
 				$this->Session->write('User.idUser',$idUser);
-	
+				$this->Session->write('User.idRol',$userRol);
 				switch ($userRol) {
 					case 1:
 						/*

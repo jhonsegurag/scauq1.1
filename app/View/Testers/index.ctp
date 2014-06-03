@@ -1,7 +1,14 @@
+<nav id="menuAdministrador">
+	<ul>
+		<li>Inicio</li>
+		<li><?php echo $this->Html->link('Mis Tareas', array('controller' => 'steps','action'=>'index')); ?></li>
+		<li><?php echo $this->Html->link('Cerrar Sesion', array('controller' => 'users','action'=>'logout')); ?></li>				
+	</ul>
+</nav>
 <section id="container">
 	<article>
 		<header>
-			<h1>¡Bienvenido!</h1>
+			<h1>¡Bienvenido Tester De Comité!</h1>
 		</header>
 		<section>
 			<div id="miembro">

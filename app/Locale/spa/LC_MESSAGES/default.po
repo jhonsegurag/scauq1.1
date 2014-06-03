@@ -123,3 +123,6 @@ msgid "New File Activity"
 msgstr "Nuevo Documento"
 
 
+
+msgid "Please enter your username and password"
+msgstr "Por favor inserte su usuario y contraseña"
