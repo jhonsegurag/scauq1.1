@@ -40,8 +40,14 @@ msgstr "Editar Actividad"
 msgid "Delete Activity" 
 msgstr "Eliminar Actividad"
 
-msgid "" 
-msgstr ""
+msgid "Add Assigment Activity" 
+msgstr "Agregar Asignacion de Actividad"
+
+msgid "List Assigment Activities"
+msgstr "Lista Actividades"
+
+msgid "Submit"
+msgstr "Aceptar"
 
 #: Users 	
 msgid "Users" 
@@ -122,7 +128,12 @@ msgstr "Documentos Actividades"
 msgid "New File Activity"
 msgstr "Nuevo Documento"
 
+#Unidad Organizacional
+msgid "Add Organizational Unit"
+msgstr "Agregar Unidad Organizacional"
 
+msgid "List Organizational Units"
+msgstr "Unidades Organizacion"
 
 msgid "Please enter your username and password"
 msgstr "Por favor inserte su usuario y contraseña"
