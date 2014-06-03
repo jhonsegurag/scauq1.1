@@ -70,6 +70,8 @@ nav ul li
 	font-weight: bold;
 }
 
+
+
 nav ul li:hover
 {
 	background: -webkit-linear-gradient(top,#9C0,#690);
@@ -78,11 +80,81 @@ nav ul li:hover
 	background: linear-gradient(top,#9C0,#690);
 }
 
+nav ul li a:hover
+{
+	color: #FFF;
+}
+
+nav ul li a
+{
+	color: #FFF;
+}
+
+
+#menuAdministrador
+{
+	border-top:5px solid #690;
+	border-bottom:5px solid #690;
+	background:rgba(255,255,255,0.8);
+	display: inline-block;
+	width: 100%;
+}
+
+#menuAdministrador ul
+{
+	margin: 10px;
+} 
+
+#menuAdministrador ul a
+{
+	text-decoration: none;
+}
+
+#menuAdministrador ul li
+{
+    list-style: none;
+    margin: 0px 5px 0px 5px;
+    display:inline-block;
+    background: #0CF;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    
+    background: -webkit-linear-gradient(top,#FC0,#C90);
+	background: -moz-linear-gradient(top,#FC0,#C90);
+	background: -o-linear-gradient(top,#FC0,#C90);
+	background: linear-gradient(top,#FC0,#C90);
+	color: #FFF;
+	font-weight: bold;
+}
+
+
+
+#menuAdministrador ul li:hover
+{
+	background: -webkit-linear-gradient(top,#C90,#FC0);
+	background: -moz-linear-gradient(top,#C90,#FC0);
+	background: -o-linear-gradient(top,#C90,#FC0);
+	background: linear-gradient(top,#C90,#FC0);
+}
+
+#menuAdministrador ul li a:hover
+{
+	color: #FFF;
+}
+
+#menuAdministrador ul li a
+{
+	color: #FFF;
+}
+
+
+
 
 #container
 {
 	width: 100%;
 	display: inline-block;
+	margin: 15px auto 15px auto;
 }
 
 #container h1
@@ -178,17 +250,5 @@ nav ul li:hover
 	background: rgba(255,255,255,0.6);
 	border-top:10px solid #9C0;
 	display: inline-block;
+	
 }
-
-#contenedorFooter .panelFooter
-{
-	float: left;
-	width: 30%;
-	margin:10px;
-}
-
-#contenedorFooter .panelFooter
-{
-	color: #333;
-}
-

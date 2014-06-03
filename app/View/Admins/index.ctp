@@ -1,14 +1,17 @@
-<nav>
+<nav id="menuAdministrador">
 	<ul>
 		<li>Inicio</li>
-		<li>Gestion Actividades</li>
+		<li><?php echo $this->Html->link('Gestion Usuarios', array('controller' => 'users','action'=>'index')); ?></li>
+		<li><?php echo $this->Html->link('Gestion Actividades', array('controller' => 'activities','action'=>'index')); ?></li>
+		<li><?php echo $this->Html->link('Asignar Actividad', array('controller' => 'assigmentactivities','action'=>'index')); ?></li>
+		<li><?php echo $this->Html->link('Realizar Seguimiento', array('action'=>'tracingActivities')); ?></li>
 		<li><?php echo $this->Html->link('Cerrar Sesion', array('controller' => 'users','action'=>'logout')); ?></li>				
 	</ul>
 </nav>
 <section id="container">
 	<article>
 		<header>
-			<h1>¡Bienvenido!</h1>
+			<h1>¡Bienvenido Administrador!</h1>
 		</header>
 		<section>
 			<div id="administrador">
