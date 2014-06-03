@@ -69,22 +69,10 @@ msgstr "Eliminar Usuario"
 msgid "Assigment Activities" 
 msgstr "Actividades Asignadas"
 
-msgid "User" 
-msgstr "Usuario"
+msgid "New Assigment Activity" 
+msgstr "Nueva Asignacion"
 
-msgid "New User" 
-msgstr "Nuevo Usuario"
-
-<<<<<<< HEAD
-msgid "List Users" 
-msgstr "Listar Usuarios"
-
-msgid "Add User" 
-msgstr "Agregar Usuario"
-
-msgid "Edit User" 
-msgstr "Editar Usuario"
-=======
+#: Tasks
 msgid "Task"
 msgstr "Tarea"
 
@@ -122,8 +110,16 @@ msgid "Organizational Units"
 msgstr "Unidades Organizacionales"
 
 msgid "New Organizational Unit"
-msgstr "Nueva Unidad Organiz"
+msgstr "Nueva Unidad"
 
 msgid "New Role"
 msgstr "Nuevo Rol"
+
+
+msgid "File Activities"
+msgstr "Documentos Actividades"
+
+msgid "New File Activity"
+msgstr "Nuevo Documento"
+
 

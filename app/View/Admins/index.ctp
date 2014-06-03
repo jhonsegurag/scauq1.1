@@ -1,3 +1,10 @@
+<nav>
+	<ul>
+		<li>Inicio</li>
+		<li>Gestion Actividades</li>
+		<li><?php echo $this->Html->link('Cerrar Sesion', array('controller' => 'users','action'=>'logout')); ?></li>				
+	</ul>
+</nav>
 <section id="container">
 	<article>
 		<header>
