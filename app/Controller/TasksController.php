@@ -2,6 +2,7 @@
 App::uses('AppController', 'Controller');
 App::import('Model', 'StateTask');
 App::import('Model', 'FileTask');
+App::import('Model', 'StateTask');
 /**
  * Tasks Controller
  *
@@ -17,12 +18,26 @@ class TasksController extends AppController {
  */
 	public $components = array('Paginator');
 
+	
+	
+	public $paginate = array();
+	
+	
+	public function getData(){
+		$state = new StateTask();
+		 $this->paginate = array(
+				'fields' => array('idTasks','nombre','descripcion','entregable','idEstadoTarea','idArchivoEntregableTarea')
+		);
+		 $this->Paginator->settings = $this->paginate;
+	}
+	
 /**
  * index method
  *
  * @return void
  */
 	public function index() {
+		//$this->getData();
 		$this->Task->recursive = 0;
 		$this->set('tasks', $this->Paginator->paginate());
 	}

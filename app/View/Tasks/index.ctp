@@ -10,7 +10,7 @@
 			<th><?php echo $this->Paginator->sort('idArchivoEntregableTarea'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
-	<?php foreach ($tasks as $task): ?>
+	<?php foreach ($tasks as $task):  ?>
 	<tr>
 		<td><?php echo h($task['Task']['idTasks']); ?>&nbsp;</td>
 		<td><?php echo h($task['Task']['nombre']); ?>&nbsp;</td>
