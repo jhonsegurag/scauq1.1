@@ -212,17 +212,16 @@ class UsersController extends AppController {
 
 	public function login() {
 	
-	
-	
-	
 		if ($this->request->is('post')) {
 	
 			$username=$this->request->data['User']['username'];
 	
 			$user= new User();
 			$userData=$user->find('first',array('conditions'=>array('User.username'=>$username)));
-				
-	
+
+		
+			$this->set('userData', $userData);
+			
 			if ($this->Auth->login())
 			{
 					

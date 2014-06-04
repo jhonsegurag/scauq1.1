@@ -204,4 +204,32 @@ class ActivitiesController extends AppController {
 			$this->Session->setFlash(__('The activity could not be deleted. Please, try again.'));
 		}
 		return $this->redirect(array('action' => 'index'));
-	}}
+	}
+
+	/**
+	 * index method
+	 *
+	 * @return void
+	 */
+	public function tracingActivities()
+	{
+		$activity = new Activity();
+		$activities=$activity->find('all');
+		$this->set('activities',$activities);
+	
+	}
+	
+	/**
+	 * index method
+	 *
+	 * @return void
+	 */
+	public function tracingTasks($id = null)
+	{
+		$task = new Task();
+		$tasks=$task->find('all',array('conditions'=>array('Task.idTasks'=>$id)));
+		$this->set('tasks',$tasks);
+	
+	}
+	
+}

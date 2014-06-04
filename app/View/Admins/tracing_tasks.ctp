@@ -18,7 +18,7 @@
 			<td><?php echo $tasks[$i]['Task']['nombre']; ?></td>
 			<td><?php echo $tasks[$i]['Task']['descripcion']; ?></td>
 			<td><?php  echo getStateColor($tasks[$i]['Task']['idEstadoTarea']); ?></td>
-			<!--<td><?php echo $this->Html->link('Ver', array('action' => 'detailsTasks', $tasks[$i]['Task']['idTasks'])); ?></td>-->
+			<td><?php echo $this->Html->link('Ver', array('action' => 'detailsTasks', $tasks[$i]['Task']['idTasks'])); ?></td>
 		</tr>
 		<?php
 		}
