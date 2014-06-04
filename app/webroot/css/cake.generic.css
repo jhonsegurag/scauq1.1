@@ -46,7 +46,7 @@ h1, h2, h3, h4 {
 	margin-bottom:0.5em;
 }
 h1 {
-	color: #003d4c;
+	color: #555555;
 	font-size: 100%;
 }
 h2 {
@@ -268,7 +268,7 @@ fieldset {
 	padding: 16px 10px;
 }
 fieldset legend {
-	color: #e32;
+	color: #555555;
 	font-size: 160%;
 	font-weight: bold;
 }

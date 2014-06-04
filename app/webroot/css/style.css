@@ -17,11 +17,12 @@ body {
 }
 
 #contenedorHeader {
-	background-image:url('../img/header_white.png');
+	
 	width: 100%;
 	background: rgba(255,255,255,0.6);
 	border-bottom: 10px solid #9C0;
 	display: inline-block;
+	background-image:url('../img/header.png');
 }
 
 #contenedorHeader #logo {
@@ -93,8 +94,6 @@ nav ul li a
 
 #menuAdministrador
 {
-	border-top:5px solid #690;
-	border-bottom:5px solid #690;
 	background:rgba(255,255,255,0.8);
 	display: inline-block;
 	width: 100%;
@@ -119,10 +118,10 @@ nav ul li a
     padding: 5px 10px 5px 10px;
     border-radius: 5px;
     
-    background: -webkit-linear-gradient(top,#FC0,#C90);
-	background: -moz-linear-gradient(top,#FC0,#C90);
-	background: -o-linear-gradient(top,#FC0,#C90);
-	background: linear-gradient(top,#FC0,#C90);
+    background: -webkit-linear-gradient(top,#690,#9C0);
+	background: -moz-linear-gradient(top,#690,#9C0);
+	background: -o-linear-gradient(top,#690,#9C0);
+	background: linear-gradient(top,#690,#9C0);
 	color: #FFF;
 	font-weight: bold;
 }

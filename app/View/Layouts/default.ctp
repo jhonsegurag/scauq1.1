@@ -51,16 +51,6 @@ $cakeDescription = __d('cake_dev', 'Sistema de control de acreditacion UQ');
 			</div>
 		</header>
 		
-		
-		
-		<nav>
-			<ul>
-				<li>Home</li>
-				<li>SCAUQ</li>
-				<li>Contáctenos</li>					
-			</ul>
-		</nav>
-		
 		<div id="content">
 			<?php echo $this->Session->flash(); ?>
 			<?php echo $this->fetch('content'); ?>

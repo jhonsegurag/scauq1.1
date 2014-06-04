@@ -33,23 +33,23 @@ App::uses('Controller', 'Controller');
 class AppController extends Controller {
 	
 	
-	  public $components = array(
+	public $components = array(
 	  	'DebugKit.Toolbar',
         'Session',
         'Auth' => array(
             'loginRedirect' => array(
                 'controller' => 'users',
-                'action' => 'index'
+                'action' => 'login'
             ),
             'logoutRedirect' => array(
-                'controller' => 'pages',
-                'action' => 'display',
-                'inicio'
+                'controller' => 'users',
+                'action' => 'login'
             )
         )
     );
 
     public function beforeFilter() {
-        $this->Auth->allow('inicio');
+    	
+        $this->Auth->allow('users','login');
     }
 }
