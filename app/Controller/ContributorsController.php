@@ -51,6 +51,8 @@ class ContributorsController extends AppController {
 		$task= new Task();
 		$dataTask=$task->find('first',array('conditions'=> array('Task.idTasks'=>$id)));
 		
+		
+		
 		$this->set('dataTask',$dataTask);
 		
 		
