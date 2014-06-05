@@ -1,5 +1,6 @@
 <?php
 App::uses('AppController', 'Controller');
+App::import('Model', 'Task');
 /**
  * FileTasks Controller
  *
@@ -88,6 +89,7 @@ class FileTasksController extends AppController {
              {
                   $archivo=$this->data['FileTask']['archivo'];
                   $destino = WWW_ROOT.'uploads'.DS;
+				  $idTarea=$this->request->data['FileTask']['idTarea'];
                   if(move_uploaded_file($archivo['tmp_name'], $destino.$archivo['name']))
                    {               
                       $ruta=$destino.$archivo['name'];
@@ -106,7 +108,15 @@ class FileTasksController extends AppController {
 			$this->FileTask->set('nombre',$this->request->data['FileTask']['nombre']);
 			$this->FileTask->set('ruta',$ruta);
 			
+			
+			
 			if ($this->FileTask->save()) {
+				
+			$task= new Task();
+			
+			$task->id = $idTarea;
+			$task->saveField('idEstadoTarea',5);
+				
 			$this->Session->setFlash(__('La Tarea ha sido enviada para calificacion'));
 			return $this->redirect(array('controller'=>'contributors','action' => 'mytasks'));
 			}

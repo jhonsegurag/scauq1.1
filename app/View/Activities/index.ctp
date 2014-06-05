@@ -8,6 +8,7 @@
 		<li><?php echo $this->Html->link('Cerrar Sesion', array('controller' => 'users','action'=>'logout')); ?></li>			
 	</ul>
 </nav>
+
 <div class="activities index">
 	<h2><?php echo __('Activities'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
@@ -41,7 +42,8 @@
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $activity['Activity']['idActivities'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $activity['Activity']['idActivities'])); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $activity['Activity']['idActivities']), null, __('Are you sure you want to delete # %s?', $activity['Activity']['idActivities'])); ?>
+			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $activity['Activity']['idActivities']), null, __('Are you sure you want to delete # %s?',
+			 $activity['Activity']['idActivities'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>

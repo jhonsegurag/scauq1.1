@@ -37,7 +37,12 @@ class ContributorsController extends AppController {
 	public function mytasks() {
 		$idUser=$this->Session->read('User.idUser');
 		$assigmentTask = new AssigmentTask();
-		$assigmentTasks=$assigmentTask->find('all',array('conditions'=>array('AssigmentTask.idAsignadoA'=>$idUser)));
+		
+		$assigmentTasks=$assigmentTask->query("SELECT a.idTarea, a.fechaRegistro, a.idActividad, t.nombre
+												FROM assigment_tasks a, tasks t
+												WHERE t.idEstadoTarea !=5
+												AND a.idAsignadoA =".$idUser."
+												AND a.idTarea = t.idTasks");
 		$this->set('assigmentTasks',$assigmentTasks);
 	}
 	
@@ -64,8 +69,8 @@ class ContributorsController extends AppController {
 	}
 	
 	public function dotask($id=null){
-			
-		
+		$idTarea=$id;	
+		$this->set('idTarea',$idTarea);
 	}
 
 	
