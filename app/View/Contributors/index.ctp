@@ -16,7 +16,8 @@
 					
 					
 					<div class="funcion">
-					<?php echo $this->Html->link($this->Html->image('administrador/vermistareas.png'),array('controller'=>'contributors','action'=>'mytasks'),array('escapeTitle' => false,'title' => 'Ver Mis Tareas')); ?>
+					<?php echo $this->Html->link($this->Html->image('administrador/vermistareas.png'),array('controller'=>'contributors','action'=>'mytasks'),array('escapeTitle' => false,'title' => 'Ver Mis Tareas')); 
+								echo 'Ver mis tareas';?>
 					</div>
 					
 					
