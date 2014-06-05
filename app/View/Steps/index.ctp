@@ -1,3 +1,12 @@
+<nav id="menuAdministrador">
+	<ul>
+		<li>Inicio</li>
+		<li><?php echo $this->Html->link('Gestion Tareas', array('controller' => 'tasks','action'=>'index')); ?></li>
+		<li><?php echo $this->Html->link('Gestion Pasos', array('controller' => 'steps','action'=>'index')); ?></li>
+		<li><?php echo $this->Html->link('Asignar Tarea', array('controller' => 'assigmenttasks','action'=>'index')); ?></li>
+		<li><?php echo $this->Html->link('Realizar Seguimiento', array('action'=>'tracingActivities')); ?></li>
+		<li><?php echo $this->Html->link('Cerrar Sesion', array('controller' => 'users','action'=>'logout')); ?></li>				
+	</ul>
 <div class="steps index">
 	<h2><?php echo __('Steps'); ?></h2>
 	<table cellpadding="0" cellspacing="0">

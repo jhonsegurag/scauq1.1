@@ -231,11 +231,15 @@ nav ul li a
 
 #container #miembro .funciones .funcion
 {
-	width: 100px;
-	height: 100px;
+	width: 110px;
+	height: 160px;
 	float: left;
 	margin: 5px;
 	border-radius: 5px;
+	color: #0A6D12;
+	text-align: center;
+	font-size: 100%;
+	font-weight: bold;
 }
 
 #container #miembro .funciones .funcion:hover
