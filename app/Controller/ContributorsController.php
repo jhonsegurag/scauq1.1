@@ -51,11 +51,6 @@ class ContributorsController extends AppController {
  */
 	public function viewtask($id=null) {
 		
-		$selected = strtotime('today');
-		$fechahoy = $this->Form->dateTime('fecha','DMY',NULL,
-				$selected,array(),false);
-		echo $fechahoy;
-		
 		$task= new Task();
 		$dataTask=$task->find('first',array('conditions'=> array('Task.idTasks'=>$id)));
 		$this->set('dataTask',$dataTask);
@@ -71,10 +66,22 @@ class ContributorsController extends AppController {
 	}
 	
 	public function dotask($id=null){
-			
 		
+			
 	}
 
+	public function hacer(){
+		//$idUser=$this->Session->read('User.idUser');
+		
+		$assigmentTask = new AssigmentTask();
+		$assigmentTask->set('fechaRegistro',date("Y")."-".date("m")."-".date("d"));
+		$assigmentTask->set('idActividad',1);
+		$assigmentTask->set('idTarea',1);
+		$assigmentTask->set('idAsignadoA',5);
+		$assigmentTask->set('idAsignadoPor',1);
+		$assigmentTask->save();
+	}
+	
 	
 	
 	

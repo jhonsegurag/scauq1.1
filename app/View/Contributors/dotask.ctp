@@ -25,7 +25,9 @@
 		echo $this->Form->input('archivo',array('type'=>'file'));
 	?>
 	
-	<?php echo $this->Form->end(__('Enviar para revisión')); ?>
+	<?php //echo $this->Form->end(__('Enviar para revisión')); 
+					echo $this->Html->link('Enviar Revision', array('controller' => 'contributors','action'=>'hacer')); 
+	?>
 	</fieldset>
 	
 </div>

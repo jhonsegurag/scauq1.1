@@ -44,7 +44,7 @@ class TasksController extends AppController {
 		$estado=$datostarea[0]['Task']['idEstadoTarea'];
 		//$nombreestado=$state->find('all',array('conditions'=>'StateTask.idStateTasks ='.$estado));
 		$nombreestado=$state->query("SELECT nombre FROM state_tasks where state_tasks.idStateTasks=".$estado.";");
-		var_dump($nombreestado);
+		//var_dump($nombreestado);
 	}
 
 /**
