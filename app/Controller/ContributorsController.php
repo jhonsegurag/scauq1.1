@@ -62,7 +62,7 @@ class ContributorsController extends AppController {
 		
 		$trackingTask= new TrackingTask();
 		$trackingTask->set('userNameResponsable',$this->Session->read('User.username'));
-		$trackingTask->set('fechaActual',date("Y"-"M"-"d"));
+		$trackingTask->set('fechaActual', date("Y")."-".date("m")."-".date("d"));
 		$trackingTask->set('nombreTarea',$dataTask['Task']['nombre']);
 		$trackingTask->set('estadoTarea','Abierto');
 		
