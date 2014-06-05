@@ -3,6 +3,7 @@ App::uses('AppController', 'Controller');
 App::import('Model', 'Task');
 App::import('Model', 'AssigmentTask');
 App::import('Model', 'FileTask');
+App::import('Model', 'TrackingTask');
 /**
  * OrganizationalUnits Controller
  *
@@ -50,11 +51,15 @@ class ContributorsController extends AppController {
 		
 		$task= new Task();
 		$dataTask=$task->find('first',array('conditions'=> array('Task.idTasks'=>$id)));
-		
-		
-		
 		$this->set('dataTask',$dataTask);
 		
+		$trackingTask= new TrackingTask();
+		$trackingTask->set('userNameResponsable',$this->Session->read('User.username'));
+		$trackingTask->set('fechaActual',date("Y"-"M"-"d"));
+		$trackingTask->set('nombreTarea',$dataTask['Task']['nombre']);
+		$trackingTask->set('estadoTarea','Abierto');
+		
+		$trackingTask->save();
 		
 	}
 	
