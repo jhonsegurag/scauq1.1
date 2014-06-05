@@ -1,0 +1,2 @@
+La carpeta "tcpdf" debe ser guardada en app/Lib
+La carpeta "jpgraph-lib" debe ser guardada en app/Vendor
