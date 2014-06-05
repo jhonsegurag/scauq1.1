@@ -34,8 +34,6 @@ class ContributorsController extends AppController {
  */
 	public function mytasks() {
 		$idUser=$this->Session->read('User.idUser');
-		
-		
 		$assigmentTask = new AssigmentTask();
 		$assigmentTasks=$assigmentTask->find('all',array('conditions'=>array('AssigmentTask.idAsignadoA'=>$idUser)));
 		$this->set('assigmentTasks',$assigmentTasks);
@@ -47,7 +45,18 @@ class ContributorsController extends AppController {
  *
  * @return void
  */
-	public function view() {
+	public function viewtask($id=null) {
+		
+		$task= new Task();
+		$dataTask=$task->find('first',array('conditions'=> array('Task.idTasks'=>$id)));
+		
+		$this->set('dataTask',$dataTask);
+		
+		
+	}
+	
+	public function dotask($id=null){
+		
 	}
 
 

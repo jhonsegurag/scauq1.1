@@ -11,7 +11,7 @@
 			<td><?php echo $assigmentTasks[$i]['AssigmentTask']['fechaRegistro']; ?></td>
 			<td><?php echo $assigmentTasks[$i]['AssigmentTask']['idActividad']; ?></td>
 			<td><?php echo $assigmentTasks[$i]['AssigmentTask']['idTarea']; ?></td>
-			<td><?php echo $this->Html->link('Ver', array('action' => 'view', $assigmentTasks[$i]['AssigmentTask']['idActividad'])); ?></td>
+			<td><?php echo $this->Html->link('Ver', array('controller'=>'contributors','action' => 'viewtask', $assigmentTasks[$i]['AssigmentTask']['idTarea'])); ?></td>
 		</tr>
 		<?php
 		}
@@ -21,6 +21,8 @@
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('New Activity'), array('action' => 'add')); ?></li>
+		<li><?php echo $this->Html->link('Inicio', array('controller' => 'contributors','action'=>'index')); ?></li>
+		
+		
 	</ul>
 </div>
