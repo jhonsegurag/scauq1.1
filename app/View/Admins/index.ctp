@@ -51,11 +51,13 @@
 					
 					
 					<div class="funcion">
-					<?php echo $this->Html->link($this->Html->image('administrador/asignaractividad.png'),array('controller'=>'assigmentactivities','action'=>'index'),array('escapeTitle' => false,'title' => 'Asignar Actividad')); ?>
+					<?php echo $this->Html->link($this->Html->image('administrador/asignaractividad.png'),array('controller'=>'assigmentactivities','action'=>'index'),array('escapeTitle' => false,'title' => 'Asignar Actividad')); 
+							echo '    Asignar Actividad';?>
 					</div>
 					
 					<div class="funcion">
-					<?php echo $this->Html->link($this->Html->image('administrador/seguimientoactividad.png'),array('action'=>'tracingActivities'),array('escapeTitle' => false,'title' => 'Seguimiento Actividad')); ?>
+					<?php echo $this->Html->link($this->Html->image('administrador/seguimientoactividad.png'),array('action'=>'tracingActivities'),array('escapeTitle' => false,'title' => 'Seguimiento Actividad')); 
+					echo '    Seguimiento de Actividades';?>
 					</div>
 					
 				</div>
