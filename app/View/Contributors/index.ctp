@@ -1,7 +1,7 @@
 <nav id="menuAdministrador">
 	<ul>
 		<li>Inicio</li>
-		<li><?php echo $this->Html->link('Mis Tareas', array('controller' => 'steps','action'=>'index')); ?></li>
+		<li><?php echo $this->Html->link('Mis Tareas', array('controller' => 'contributors','action'=>'mytasks')); ?></li>
 		<li><?php echo $this->Html->link('Cerrar Sesion', array('controller' => 'users','action'=>'logout')); ?></li>				
 	</ul>
 </nav>
