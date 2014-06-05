@@ -46,15 +46,37 @@ class FileActivitiesController extends AppController {
  * @return void
  */
 	public function add() {
-		if ($this->request->is('post')) {
-			$this->FileActivity->create();
-			if ($this->FileActivity->save($this->request->data)) {
-				$this->Session->setFlash(__('The file activity has been saved.'));
-				return $this->redirect(array('action' => 'index'));
-			} else {
-				$this->Session->setFlash(__('The file activity could not be saved. Please, try again.'));
+		$this->FileActivity->create();
+         
+        if ($this->request->is('post')) {
+            $ruta='';    
+            if( $this->data['FileActivity']['archivo']['error'] == 0 &&  $this->data['FileActivity']['archivo']['size'] > 0)
+             {
+                  $archivo=$this->data['FileActivity']['archivo'];
+                  $destino = WWW_ROOT.'uploads'.DS;
+                  if(move_uploaded_file($archivo['tmp_name'], $destino.$archivo['name']))
+                   {               
+                      $ruta=$destino.$archivo['name'];
+                   }
+                  else
+                   {
+                          $this->Session->setFlash(__('El archivo no se pudo subir, por favor intentelo de nuevo'));       
+                   }
+				   
+				  
+                   
+            }else{
+                  $this->Session->setFlash(__('Error al intentar subir el archivo'));
+            }
+			
+			$this->FileActivity->set('nombre',$this->request->data['FileActivity']['nombre']);
+			$this->FileActivity->set('ruta',$ruta);
+			
+			if ($this->FileActivity->save()) {
+			$this->Session->setFlash(__('El archivo se a guardado con éxito'));
+			return $this->redirect(array('action' => 'index'));
 			}
-		}
+        }
 	}
 
 /**

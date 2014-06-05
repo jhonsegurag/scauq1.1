@@ -2,6 +2,7 @@
 App::uses('AppController', 'Controller');
 App::import('Model', 'Task');
 App::import('Model', 'AssigmentTask');
+App::import('Model', 'FileTask');
 /**
  * OrganizationalUnits Controller
  *
@@ -56,8 +57,12 @@ class ContributorsController extends AppController {
 	}
 	
 	public function dotask($id=null){
+			
 		
 	}
 
-
+	
+	
+	
+	
 }

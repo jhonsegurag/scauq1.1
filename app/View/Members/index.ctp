@@ -28,7 +28,9 @@
 								echo 'Gestion de Pasos'?>
 					</div>
 					
-					
+					<div class="funcion">
+					<?php echo $this->Html->link($this->Html->image('administrador/gestionarchivo.png'),array('controller'=>'filetasks','action'=>'index'),array('escapeTitle' => false,'title' => 'Gestion De Documentos')); ?>
+					</div>
 					
 				</div>
 				
