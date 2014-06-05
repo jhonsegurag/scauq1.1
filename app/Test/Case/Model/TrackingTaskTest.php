@@ -25,10 +25,6 @@ class TrackingTaskTest extends CakeTestCase {
 		parent::setUp();
 		$this->TrackingTask = ClassRegistry::init('TrackingTask');
 	}
-	
-	function testTrackingTaskInstance() {
-		$this->assertTrue(is_a($this->TrackingTask, 'TrackingTask'));
-	}
 
 /**
  * tearDown method

@@ -40,6 +40,8 @@ class TasksController extends AppController {
 		//$this->getData();
 		$this->Task->recursive = 0;
 		$this->set('tasks', $this->Paginator->paginate());
+		$datostarea=$this->Task->find('all',array('conditions'=>'Task.idEstadoTarea = 1'));
+		var_dump($datostarea); 
 	}
 
 /**

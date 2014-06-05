@@ -7,6 +7,7 @@
 		<li><?php echo $this->Html->link('Realizar Seguimiento', array('action'=>'tracingActivities')); ?></li>
 		<li><?php echo $this->Html->link('Cerrar Sesion', array('controller' => 'users','action'=>'logout')); ?></li>				
 	</ul>
+</nav>
 <div class="steps index">
 	<h2><?php echo __('Steps'); ?></h2>
 	<table cellpadding="0" cellspacing="0">

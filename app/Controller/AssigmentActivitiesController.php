@@ -2,6 +2,9 @@
 App::uses('AppController', 'Controller');
 App::import('Model', 'Activity');
 App::import('Model', 'User');
+App::uses('Lib', 'elibom');
+App::uses('Lib', 'elibom/elibom');
+App::import('Vendor', 'elibom/elibom');
 /**
  * AssigmentActivities Controller
  *
@@ -60,7 +63,12 @@ class AssigmentActivitiesController extends AppController {
 		if ($this->request->is('post')) {
 			$this->AssigmentActivity->create();
 			if ($this->AssigmentActivity->save($this->request->data)) {
+				$datasol = $this->request->data;
+				var_dump($datasol);
+				//print ($datasol[4]);
 				$this->Session->setFlash(__('The assigment activity has been saved.'));
+				$elibom = new ElibomClient('ares2717@hotmail.com', 'j91l1DIHuD');
+				$deliveryId = $elibom->sendMessage('573015596207', 'Esto es una prueba en PHP');
 				return $this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The assigment activity could not be saved. Please, try again.'));

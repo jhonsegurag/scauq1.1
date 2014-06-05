@@ -3,7 +3,7 @@
 	<table cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('idTrackingTask'); ?></th>
-			<th><?php echo $this->Paginator->sort('usernameResponsable'); ?></th>
+			<th><?php echo $this->Paginator->sort('userNameResponsable'); ?></th>
 			<th><?php echo $this->Paginator->sort('fechaActual'); ?></th>
 			<th><?php echo $this->Paginator->sort('nombreTarea'); ?></th>
 			<th><?php echo $this->Paginator->sort('estadoTarea'); ?></th>
@@ -12,7 +12,7 @@
 	<?php foreach ($trackingTasks as $trackingTask): ?>
 	<tr>
 		<td><?php echo h($trackingTask['TrackingTask']['idTrackingTask']); ?>&nbsp;</td>
-		<td><?php echo h($trackingTask['TrackingTask']['usernameResponsable']); ?>&nbsp;</td>
+		<td><?php echo h($trackingTask['TrackingTask']['userNameResponsable']); ?>&nbsp;</td>
 		<td><?php echo h($trackingTask['TrackingTask']['fechaActual']); ?>&nbsp;</td>
 		<td><?php echo h($trackingTask['TrackingTask']['nombreTarea']); ?>&nbsp;</td>
 		<td><?php echo h($trackingTask['TrackingTask']['estadoTarea']); ?>&nbsp;</td>
