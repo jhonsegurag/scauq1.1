@@ -1,9 +1,11 @@
 <?php
 App::uses('AppController', 'Controller');
+App::uses('CakeTime', 'Utility');
 App::import('Model', 'Task');
 App::import('Model', 'AssigmentTask');
 App::import('Model', 'FileTask');
 App::import('Model', 'TrackingTask');
+
 /**
  * OrganizationalUnits Controller
  *
@@ -48,6 +50,11 @@ class ContributorsController extends AppController {
  * @return void
  */
 	public function viewtask($id=null) {
+		
+		$selected = strtotime('today');
+		$fechahoy = $this->Form->dateTime('fecha','DMY',NULL,
+				$selected,array(),false);
+		echo $fechahoy;
 		
 		$task= new Task();
 		$dataTask=$task->find('first',array('conditions'=> array('Task.idTasks'=>$id)));

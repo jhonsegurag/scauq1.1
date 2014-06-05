@@ -37,11 +37,14 @@ class TasksController extends AppController {
  * @return void
  */
 	public function index() {
-		//$this->getData();
+		$state = new StateTask();
 		$this->Task->recursive = 0;
 		$this->set('tasks', $this->Paginator->paginate());
-		$datostarea=$this->Task->find('all',array('conditions'=>'Task.idEstadoTarea = 1'));
-		var_dump($datostarea); 
+		$datostarea=$this->Task->find('all',array('conditions'=>'Task.idTasks = 2'));
+		$estado=$datostarea[0]['Task']['idEstadoTarea'];
+		//$nombreestado=$state->find('all',array('conditions'=>'StateTask.idStateTasks ='.$estado));
+		$nombreestado=$state->query("SELECT nombre FROM state_tasks where state_tasks.idStateTasks=".$estado.";");
+		var_dump($nombreestado);
 	}
 
 /**

@@ -6,7 +6,7 @@
 		echo $this->Form->input('nombre');
 		echo $this->Form->input('descripcion');
 		echo $this->Form->input('entregable',array('label'=>'Tipo Entregable'));
-		echo $this->Form->input('idEstadoTarea',array('label'=>'Estado Tarea','class'=>'input select','type'=>'select','options'=>$stateTasks,'empty'=>false));
+		//echo $this->Form->input('idEstadoTarea',array('label'=>'Estado Tarea','class'=>'input select','type'=>'select','options'=>$stateTasks,'empty'=>false));
 		echo $this->Form->input('idArchivoEntregableTarea',array('label'=>'Archivo Entregable','class'=>'','type'=>'select','options'=>$fileTasks,'empty'=>false));
 	
 	?>
