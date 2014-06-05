@@ -4,9 +4,9 @@
 		
 		
 		
-		<li><?php echo $this->Html->link('Volver', array('controller' => 'contributors','action'=>'mytasks')); ?></li>
+		<li><?php echo $this->Html->link('Cancelar', array('controller' => 'contributors','action'=>'mytasks')); ?></li>
 		
-		<li><?php echo $this->Html->link('Inicio', array('controller' => 'contributors','action'=>'index')); ?></li>
+		
 		
 		
 	</ul>
@@ -23,6 +23,7 @@
 	
 		echo $this->Form->input('nombre');
 		echo $this->Form->input('archivo',array('type'=>'file'));
+		echo $this->Form->input('idTarea',array('type'=>'hidden','value'=>$idTarea));
 	?>
 	
 	<?php //echo $this->Form->end(__('Enviar para revisión')); 

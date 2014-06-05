@@ -5,13 +5,14 @@
 		
 		<tr><th>Fecha Registro</th><th>Id Actividad</th><th>Id Tarea</th><th>Acciones</th></tr>
 		<?php
+		
 		for ($i=0; $i <sizeof($assigmentTasks) ; $i++) {		
 		?>
 		<tr>
-			<td><?php echo $assigmentTasks[$i]['AssigmentTask']['fechaRegistro']; ?></td>
-			<td><?php echo $assigmentTasks[$i]['AssigmentTask']['idActividad']; ?></td>
-			<td><?php echo $assigmentTasks[$i]['AssigmentTask']['idTarea']; ?></td>
-			<td><?php echo $this->Html->link('Ver', array('controller'=>'contributors','action' => 'viewtask', $assigmentTasks[$i]['AssigmentTask']['idTarea'])); ?></td>
+			<td><?php echo $assigmentTasks[$i]['a']['fechaRegistro']; ?></td>
+			<td><?php echo $assigmentTasks[$i]['a']['idActividad']; ?></td>
+			<td><?php echo $assigmentTasks[$i]['t']['nombre']; ?></td>
+			<td><?php echo $this->Html->link('Ver', array('controller'=>'contributors','action' => 'viewtask', $assigmentTasks[$i]['a']['idTarea'])); ?></td>
 		</tr>
 		<?php
 		}

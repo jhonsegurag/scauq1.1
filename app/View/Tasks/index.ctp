@@ -1,6 +1,6 @@
 <nav id="menuAdministrador">
 	<ul>
-		<li>Inicio</li>
+		<li><?php echo $this->Html->link('Inicio', array('controller' => 'members','action'=>'index')); ?></li>
 		<li><?php echo $this->Html->link('Gestion Tareas', array('controller' => 'tasks','action'=>'index')); ?></li>
 		<li><?php echo $this->Html->link('Gestion Pasos', array('controller' => 'steps','action'=>'index')); ?></li>
 		<li><?php echo $this->Html->link('Asignar Tarea', array('controller' => 'assigmenttasks','action'=>'index')); ?></li>
@@ -16,8 +16,7 @@
 			<th><?php echo $this->Paginator->sort('nombre'); ?></th>
 			<th><?php echo $this->Paginator->sort('descripcion'); ?></th>
 			<th><?php echo $this->Paginator->sort('entregable'); ?></th>
-			<th><?php echo $this->Paginator->sort('idEstadoTarea'); ?></th>
-			
+			<th><?php echo $this->Paginator->sort('idEstadoTarea'); ?></th>			
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($tasks as $task):  ?>
@@ -34,7 +33,7 @@
 			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $task['Task']['idTasks']), null, __('Are you sure you want to delete # %s?', $task['Task']['idTasks'])); ?>
 		</td>
 	</tr>
-<?php endforeach; ?>
+	<?php endforeach; ?>
 	</table>
 	<p>
 	<?php
