@@ -24,7 +24,6 @@ class FileTasksController extends AppController {
 		$this->FileTask->recursive = 0;
 		$this->set('fileTasks', $this->Paginator->paginate());
 	}
-
 /**
  * view method
  *
@@ -46,15 +45,72 @@ class FileTasksController extends AppController {
  * @return void
  */
 	public function add() {
-		if ($this->request->is('post')) {
-			$this->FileTask->create();
-			if ($this->FileTask->save($this->request->data)) {
-				$this->Session->setFlash(__('The file task has been saved.'));
-				return $this->redirect(array('action' => 'index'));
-			} else {
-				$this->Session->setFlash(__('The file task could not be saved. Please, try again.'));
+		$this->FileTask->create();
+         
+        if ($this->request->is('post')) {
+            $ruta='';    
+            if( $this->data['FileTask']['archivo']['error'] == 0 &&  $this->data['FileTask']['archivo']['size'] > 0)
+             {
+                  $archivo=$this->data['FileTask']['archivo'];
+                  $destino = WWW_ROOT.'uploads'.DS;
+                  if(move_uploaded_file($archivo['tmp_name'], $destino.$archivo['name']))
+                   {               
+                      $ruta=$destino.$archivo['name'];
+                   }
+                  else
+                   {
+                          $this->Session->setFlash(__('El archivo no se pudo subir, por favor intentelo de nuevo'));       
+                   }
+				   
+				  
+                   
+            }else{
+                  $this->Session->setFlash(__('Error al intentar subir el archivo'));
+            }
+			
+			$this->FileTask->set('nombre',$this->request->data['FileTask']['nombre']);
+			$this->FileTask->set('ruta',$ruta);
+			
+			if ($this->FileTask->save()) {
+			$this->Session->setFlash(__('El archivo se a guardado con éxito'));
+			return $this->redirect(array('action' => 'index'));
 			}
-		}
+        }
+	}
+
+
+	public function addreview() {
+		$this->FileTask->create();
+         
+        if ($this->request->is('post')) {
+            $ruta='';    
+            if( $this->data['FileTask']['archivo']['error'] == 0 &&  $this->data['FileTask']['archivo']['size'] > 0)
+             {
+                  $archivo=$this->data['FileTask']['archivo'];
+                  $destino = WWW_ROOT.'uploads'.DS;
+                  if(move_uploaded_file($archivo['tmp_name'], $destino.$archivo['name']))
+                   {               
+                      $ruta=$destino.$archivo['name'];
+                   }
+                  else
+                   {
+                          $this->Session->setFlash(__('El archivo no se pudo subir, por favor intentelo de nuevo'));       
+                   }
+				   
+				  
+                   
+            }else{
+                  $this->Session->setFlash(__('Error al intentar subir el archivo'));
+            }
+			
+			$this->FileTask->set('nombre',$this->request->data['FileTask']['nombre']);
+			$this->FileTask->set('ruta',$ruta);
+			
+			if ($this->FileTask->save()) {
+			$this->Session->setFlash(__('La Tarea ha sido enviada para calificacion'));
+			return $this->redirect(array('controller'=>'contributors','action' => 'mytasks'));
+			}
+        }
 	}
 
 /**

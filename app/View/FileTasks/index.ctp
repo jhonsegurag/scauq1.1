@@ -9,13 +9,13 @@
 	</tr>
 	<?php foreach ($fileTasks as $fileTask): ?>
 	<tr>
-		<td><?php echo h($fileTask['FileTask']['idfiles']); ?>&nbsp;</td>
+		<td><?php echo h($fileTask['FileTask']['idFiles']); ?>&nbsp;</td>
 		<td><?php echo h($fileTask['FileTask']['nombre']); ?>&nbsp;</td>
 		<td><?php echo h($fileTask['FileTask']['ruta']); ?>&nbsp;</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $fileTask['FileTask']['idfiles'])); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $fileTask['FileTask']['idfiles'])); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $fileTask['FileTask']['idfiles']), null, __('Are you sure you want to delete # %s?', $fileTask['FileTask']['idfiles'])); ?>
+			<?php echo $this->Html->link(__('View'), array('action' => 'view', $fileTask['FileTask']['idFiles'])); ?>
+			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $fileTask['FileTask']['idFiles'])); ?>
+			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $fileTask['FileTask']['idFiles']), null, __('Are you sure you want to delete # %s?', $fileTask['FileTask']['idFiles'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>

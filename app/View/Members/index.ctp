@@ -20,15 +20,18 @@
 					
 					<div class="funcion">
 					<?php echo $this->Html->link($this->Html->image('administrador/gestiontarea.png'),array('controller'=>'tasks','action'=>'index'),array('escapeTitle' => false,'title' => 'Gestion De Tareas')); 
-								echo 'Gestion de Tareas'?>
+								echo 'Gestion de Tareas';?>
 					</div>
 					
 					<div class="funcion">
 					<?php echo $this->Html->link($this->Html->image('administrador/gestionpaso.png'),array('controller'=>'steps','action'=>'index'),array('escapeTitle' => false,'title' => 'Gestion De Pasos')); 
-								echo 'Gestion de Pasos'?>
+								echo 'Gestion de Pasos';?>
 					</div>
 					
-					
+					<div class="funcion">
+					<?php echo $this->Html->link($this->Html->image('administrador/gestionarchivo.png'),array('controller'=>'filetasks','action'=>'index'),array('escapeTitle' => false,'title' => 'Gestion De Documentos'));
+								echo 'Gestion Documentos'; ?>
+					</div>
 					
 				</div>
 				
@@ -41,7 +44,7 @@
 					</div>
 					
 					<div class="funcion">
-					<?php echo $this->Html->link($this->Html->image('administrador/seguimientotarea.png'),array('controller'=>'assigmenttasks','action'=>'index'),array('escapeTitle' => false,'title' => 'Seguimiento Tarea')); 
+					<?php echo $this->Html->link($this->Html->image('administrador/seguimientotarea.png'),array('action'=>'tracingActivities'),array('escapeTitle' => false,'title' => 'Seguimiento Tarea')); 
 								echo 'Seguimiento de Tarea'?>
 					</div>
 					

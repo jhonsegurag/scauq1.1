@@ -11,12 +11,21 @@
 		
 	</ul>
 </div>
-<div class="hacerTarea index">
+<div class="hacerTarea indexResize">
 	<h2>Realizar Tarea</h2>
 	
-	<?php  echo $this->Form->create('FileTask',array('type'=>'file')); ?>
+	<?php  echo $this->Form->create('FileTask', array('type'=>'file',
+    'url' => array('controller' => 'filetasks', 'action' => 'addreview')
+)); ?>
+	<fieldset>
+		<legend><?php echo __(''); ?></legend>
+	<?php
 	
+		echo $this->Form->input('nombre');
+		echo $this->Form->input('archivo',array('type'=>'file'));
+	?>
 	
-	
+	<?php echo $this->Form->end(__('Enviar para revisión')); ?>
+	</fieldset>
 	
 </div>

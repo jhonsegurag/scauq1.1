@@ -121,6 +121,21 @@ div.view {
 	border-left:1px solid #666;
 	padding:10px 2%;
 }
+
+div.formResize {
+	float:right;
+	width:60%;
+	border-left:1px solid #666;
+	padding:10px 2%;
+}
+
+div.indexResize {
+	float:right;
+	width:60%;
+	border-left:1px solid #666;
+	padding:10px 2%;
+}
+
 div.actions {
 	float:left;
 	width:16%;

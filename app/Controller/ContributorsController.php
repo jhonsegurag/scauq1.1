@@ -2,6 +2,7 @@
 App::uses('AppController', 'Controller');
 App::import('Model', 'Task');
 App::import('Model', 'AssigmentTask');
+App::import('Model', 'FileTask');
 /**
  * OrganizationalUnits Controller
  *
@@ -50,14 +51,20 @@ class ContributorsController extends AppController {
 		$task= new Task();
 		$dataTask=$task->find('first',array('conditions'=> array('Task.idTasks'=>$id)));
 		
+		
+		
 		$this->set('dataTask',$dataTask);
 		
 		
 	}
 	
 	public function dotask($id=null){
+			
 		
 	}
 
-
+	
+	
+	
+	
 }
